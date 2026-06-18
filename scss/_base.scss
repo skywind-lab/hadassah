@@ -1,0 +1,65 @@
+// 1. Сброс box-sizing для всех элементов
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// 2. Полный сброс внешних отступов (margins) для всех основных элементов.
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+// 3. Настройки для body (чистый лист)
+body {
+  min-height: 100vh; // Чтобы фон или сайт растягивались минимум на весь экран
+  scroll-behavior: smooth; // Плавная прокрутка по якорям
+  text-rendering: optimizeSpeed; // Оптимизация скорости рендера текста
+  line-height: 1.5; // Базовое расстояние между строками
+}
+
+// 4. Списки (как у тебя — убираем точки и сдвиги)
+ul,
+ol {
+  list-style: none;
+}
+
+// 5. Ссылки (чтобы не были синими и с подчеркиванием по умолчанию)
+a {
+  text-decoration: none;
+  color: inherit; // Наследует цвет текста, который ты задашь родителю
+  display: inline-block; // Удобно для кликабельности и отступов
+}
+
+// 6. Картинки (резиновые и без лишних зазоров снизу)
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+
+// 7. Формы и кнопки (чтобы не использовали старые страшные шрифты браузера)
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

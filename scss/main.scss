@@ -1,0 +1,24 @@
+// 1. Утилиты, настройки и шрифты
+@use "utils/variables";
+@use "utils/fonts";
+@use "utils/texts";
+
+// 2. Базовые сбросы
+@use "base";
+
+// 3. Сетка и контейнеры
+@use "layouts/container";
+
+// 4. Компоненты
+@use "components/buttons";
+@use "components/links";
+
+// 5. Секции сайта
+@use "layouts/header";
+@use "layouts/hero-section";
+@use "layouts/section";
+@use "layouts/mobile-menu";
+@use "layouts/modal";
+@use "layouts/footer";
+
+

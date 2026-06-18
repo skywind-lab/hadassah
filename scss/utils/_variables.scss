@@ -1,0 +1,19 @@
+// scss/utils/_variables.scss
+
+// 1. Цвета (теперь всё через $)
+$color-primary-dark: #252424;
+$color-primary-light: #faf4ea;
+$color-secondary-dark: #83665b;
+$color-brand: #da8b80;
+$color-green: #a9af8d;
+$color-brand-light: #ebe0e0;
+
+// 2. Брейкпоинты (контрольные точки экрана)
+// Мобильные
+$bp-mobile: 480px;
+// Планшеты
+$bp-tablet: 768px;
+// Ноутбуки
+$bp-desktop: 1024px;
+// Большие мониторы
+$bp-large: 1440px;

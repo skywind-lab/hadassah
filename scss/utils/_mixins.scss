@@ -1,0 +1,27 @@
+// scss/utils/_mixins.scss
+@use "variables" as v;
+
+@mixin tablet {
+  @media screen and (min-width: v.$bp-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: v.$bp-desktop) {
+    @content;
+  }
+}
+
+// Миксин для центрирования (Flexbox)
+// Использовать: @include m.flex-center;
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
