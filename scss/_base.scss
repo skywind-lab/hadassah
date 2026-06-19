@@ -1,3 +1,5 @@
+@use "./utils/index" as u;
+
 // 1. Сброс box-sizing для всех элементов
 *,
 *::before,
@@ -29,6 +31,11 @@ dd {
 
 // 3. Настройки для body (чистый лист)
 body {
+  color: u.$color-primary-dark;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
   min-height: 100vh; // Чтобы фон или сайт растягивались минимум на весь экран
   scroll-behavior: smooth; // Плавная прокрутка по якорям
   text-rendering: optimizeSpeed; // Оптимизация скорости рендера текста

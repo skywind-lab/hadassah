@@ -9,24 +9,26 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header__container">
+      <div class="container header__layout">
         <a href="./index.html" class="header__logo">
           <img src="./images/logo.svg" alt="Logo Hadassah" />
         </a>
 
         <nav class="header__nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Skincare</a></li>
-            <li><a href="#">Makeup</a></li>
-            <li><a href="#">Fragrances</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul class="header__menu">
+            <li><a class="header__link" href="#">Home</a></li>
+            <li><a class="header__link" href="#">About</a></li>
+            <li><a class="header__link" href="#">Skincare</a></li>
+            <li><a class="header__link" href="#">Makeup</a></li>
+            <li><a class="header__link" href="#">Fragrances</a></li>
+            <li><a class="header__link" href="#">Contact</a></li>
           </ul>
         </nav>
 
-        <button class="header__button" type="button">Shop now</button>
-        <!-- client panel -->
+        <div class="header__right">
+          <button class="header__shop-btn" type="button">Shop Now</button>
+          <div class="header__icons">🔍 👤 🛒</div>
+        </div>
       </div>
     </header>
 

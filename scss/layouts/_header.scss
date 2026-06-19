@@ -1,13 +1,14 @@
+@use "../utils/index" as u;
+
 .header {
   width: 100%;
-  padding-top: 80px;
-  background-color: #f5adad;
+  padding: 50px 0; /* Добавляем "воздуха" сверху и снизу */
+  background-color: #9cce3f;
 
-  &__container {
+  &__layout {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    justify-content: space-between; /* Элементы распределятся красиво и равномерно */
   }
 
   &__logo {
@@ -15,12 +16,51 @@
   }
 
   &__nav {
-    flex: 2;
-    display: flex;
-    align-items: center;
+    flex: 3;
+    // display: flex;
+
+    // align-items: center;
   }
 
-  &__button {
+  &__menu {
+    display: flex;
+    justify-content: space-evenly;
+    // gap: 40px;
+    // text-decoration: none;
+    // color: #7ff372;
+    // font-weight: 400;
+    // transition: opacity 0.3s ease;
+  }
+
+  &__link {
+    color: u.$color-brand;
+    font-size: 1.5rem;
+  }
+
+  &__right {
+    display: flex;
     flex: 1;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
+  &__shop-btn {
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    align-items: center;
+    padding: 3% 7%;
+    background-color: u.$color-brand;
+    color: u.$color-primary-light;
+    font-size: 1.5rem;
+    border-radius: 100px;
+
+    &:active {
+      transform: scale(0.98); // Кнопка слегка вдавливается при клике
+    }
+  }
+
+  &__icons {
+    align-content: center;
   }
 }
