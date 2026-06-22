@@ -3,12 +3,12 @@
 .header {
   width: 100%;
   padding: 50px 0; /* Добавляем "воздуха" сверху и снизу */
-  background-color: #9cce3f;
 
   &__layout {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Элементы распределятся красиво и равномерно */
+    gap: 2rem;
   }
 
   &__logo {
@@ -17,29 +17,21 @@
 
   &__nav {
     flex: 3;
-    // display: flex;
-
-    // align-items: center;
   }
 
   &__menu {
     display: flex;
     justify-content: space-evenly;
-    // gap: 40px;
-    // text-decoration: none;
-    // color: #7ff372;
-    // font-weight: 400;
-    // transition: opacity 0.3s ease;
   }
 
   &__link {
     color: u.$color-brand;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   &__right {
     display: flex;
-    flex: 1;
+    flex: 1.2;
     text-align: center;
     justify-content: space-evenly;
   }
@@ -52,7 +44,7 @@
     padding: 3% 7%;
     background-color: u.$color-brand;
     color: u.$color-primary-light;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border-radius: 100px;
 
     &:active {
@@ -61,6 +53,10 @@
   }
 
   &__icons {
-    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    fill: u.$color-secondary-dark;
   }
 }

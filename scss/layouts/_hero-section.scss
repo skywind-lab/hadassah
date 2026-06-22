@@ -1,0 +1,10 @@
+.hero-section {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: image-set(
+    url("/images/hero-image.webp") type("image/webp"),
+    url("/images/hero-image.jpg") type("image/jpeg")
+  );
+}

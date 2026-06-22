@@ -123,7 +123,6 @@ select {
 .header {
   width: 100%;
   padding: 50px 0; /* Добавляем "воздуха" сверху и снизу */
-  background-color: #9cce3f;
 }
 .header__layout {
   display: -webkit-box;
@@ -135,6 +134,7 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; /* Элементы распределятся красиво и равномерно */
+  gap: 2rem;
 }
 .header__logo {
   -webkit-box-flex: 1;
@@ -156,15 +156,15 @@ select {
 }
 .header__link {
   color: #da8b80;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .header__right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 1.2;
+      -ms-flex: 1.2;
+          flex: 1.2;
   text-align: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -180,7 +180,7 @@ select {
   padding: 3% 7%;
   background-color: #da8b80;
   color: #faf4ea;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border-radius: 100px;
 }
 .header__shop-btn:active {
@@ -188,6 +188,24 @@ select {
           transform: scale(0.98);
 }
 .header__icons {
-  -ms-flex-line-pack: center;
-      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+  fill: #83665b;
+}
+
+.hero-section {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: -webkit-image-set(url("/images/hero-image.webp") type("image/webp"), url("/images/hero-image.jpg") type("image/jpeg"));
+  background-image: image-set(url("/images/hero-image.webp") type("image/webp"), url("/images/hero-image.jpg") type("image/jpeg"));
 }/*# sourceMappingURL=main.css.map */
