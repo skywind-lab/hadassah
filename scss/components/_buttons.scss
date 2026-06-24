@@ -1,0 +1,11 @@
+.button {
+  display: flex;
+  width: max-content; /* Принудительно фиксируем ширину по тексту */
+  justify-content: center; /* Центрируем текст внутри флекса */
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 100px;
+  backdrop-filter: blur(4px);
+}

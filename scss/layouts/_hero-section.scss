@@ -1,5 +1,8 @@
+@use "../utils/index" as u;
+
 .hero-section {
-  min-height: 100vh;
+  min-height: 85vh;
+  padding-top: 30px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -7,4 +10,27 @@
     url("/images/hero-image.webp") type("image/webp"),
     url("/images/hero-image.jpg") type("image/jpeg")
   );
+
+  &__button {
+    margin: 0 auto;
+    color: u.$color-secondary-dark;
+    font-size: 1.7rem;
+    padding: 7px 50px;
+    background-color: rgba(u.$color-primary-light, 0.8);
+    box-shadow: 0 4px 5px rgba(u.$color-secondary-dark, 0.25); /* Мягкая тень под цвет фона */
+  }
+
+  &__subtitle {
+    margin-top: 180px;
+    @include u.subtitle-style;
+    color: u.$color-primary-light;
+    text-shadow: 0 3px 3px rgba(u.$color-secondary-dark, 0.8);
+  }
+
+  &__title {
+    @include u.h1-style;
+    margin-left: -4px;
+    color: u.$color-primary-light;
+    text-shadow: 0 4px 5px rgba(u.$color-secondary-dark, 0.8);
+  }
 }

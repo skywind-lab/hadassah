@@ -1,4 +1,12 @@
 @charset "UTF-8";
+/* tiro-telugu-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Tiro Telugu";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/tiro-telugu-v7-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 /* inter-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -47,6 +55,14 @@
   font-weight: 700;
   src: url("../fonts/inter-v20-latin-700italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+.card-text {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(131, 102, 91, 0.7);
+}
+
 *,
 *::before,
 *::after {
@@ -120,9 +136,29 @@ select {
   padding: 0 1rem; /* 16px, чуть больше стандартных 15px */
 }
 
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content; /* Принудительно фиксируем ширину по тексту */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* Центрируем текст внутри флекса */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 100px;
+  backdrop-filter: blur(4px);
+}
+
 .header {
   width: 100%;
-  padding: 50px 0; /* Добавляем "воздуха" сверху и снизу */
+  padding: 50px 0 30px; /* Добавляем "воздуха" сверху и снизу */
 }
 .header__layout {
   display: -webkit-box;
@@ -171,17 +207,10 @@ select {
           justify-content: space-evenly;
 }
 .header__shop-btn {
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 3% 7%;
   background-color: #da8b80;
   color: #faf4ea;
   font-size: 1.3rem;
-  border-radius: 100px;
+  padding: 7px 20px;
 }
 .header__shop-btn:active {
   -webkit-transform: scale(0.98);
@@ -202,10 +231,179 @@ select {
 }
 
 .hero-section {
-  min-height: 100vh;
+  min-height: 85vh;
+  padding-top: 30px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: -webkit-image-set(url("/images/hero-image.webp") type("image/webp"), url("/images/hero-image.jpg") type("image/jpeg"));
   background-image: image-set(url("/images/hero-image.webp") type("image/webp"), url("/images/hero-image.jpg") type("image/jpeg"));
+}
+.hero-section__button {
+  margin: 0 auto;
+  color: #83665b;
+  font-size: 1.7rem;
+  padding: 7px 50px;
+  background-color: rgba(250, 244, 234, 0.8);
+  -webkit-box-shadow: 0 4px 5px rgba(131, 102, 91, 0.25);
+          box-shadow: 0 4px 5px rgba(131, 102, 91, 0.25); /* Мягкая тень под цвет фона */
+}
+.hero-section__subtitle {
+  margin-top: 180px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #faf4ea;
+  text-shadow: 0 3px 3px rgba(131, 102, 91, 0.8);
+}
+.hero-section__title {
+  font-family: "Tiro Telugu", serif;
+  font-size: 10rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-left: -4px;
+  color: #faf4ea;
+  text-shadow: 0 4px 5px rgba(131, 102, 91, 0.8);
+}
+
+.advantages-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 180px 0 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.advantages-section__title {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #da8b80;
+}
+.advantages-section__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 120px;
+  gap: 30px;
+}
+.advantages-section__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 30px;
+  border: 2px solid rgba(131, 102, 91, 0.3);
+  border-radius: 0 90px 0 90px;
+}
+.advantages-section__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(131, 102, 91, 0.2);
+  fill: #83665b;
+}
+.advantages-section__subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #83665b;
+}
+
+.collections-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 100px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.collections-section__title {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #da8b80;
+}
+.collections-section__subtitle {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: rgba(131, 102, 91, 0.8);
+}
+.collections-section__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 120px;
+  gap: 30px;
+}
+.collections-section__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 440px;
+  height: 625px;
+  border-radius: 50px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 4px 5px rgba(131, 102, 91, 0.25);
+          box-shadow: 0 4px 5px rgba(131, 102, 91, 0.25); /* Мягкая тень под цвет фона */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 10px;
+  background-color: #a9af8d;
+}
+.collections-section__image {
+  width: 100%;
+  height: 460px;
+  background-image: -webkit-image-set(url("/images/collections1.webp") type("image/webp"), url("/images/collections1.jpg") type("image/jpeg"));
+  background-image: image-set(url("/images/collections1.webp") type("image/webp"), url("/images/collections1.jpg") type("image/jpeg"));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50px;
 }/*# sourceMappingURL=main.css.map */
