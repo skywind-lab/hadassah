@@ -35,10 +35,13 @@
   }
 
   &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     grid-column: 3 / 8; // Занимает с 3 по 8 колонку
-    grid-row: 4 / 15;
+    grid-row: 5 / 15;
     background: u.$color-brand-light;
-    padding: 40px;
+    padding: 40px 60px;
     z-index: 3; // Самый верхний слой среди контента
   }
 
@@ -47,6 +50,14 @@
     margin-bottom: 20px;
     @include u.h3-style;
     color: u.$color-secondary-dark;
+  }
+
+  &__text {
+    @include u.body-text;
+  }
+
+  &__btn {
+    align-self: flex-end;
   }
 
   &__image-main {

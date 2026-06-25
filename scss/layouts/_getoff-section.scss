@@ -1,0 +1,50 @@
+@use "../utils/index" as u;
+
+.getoff-section {
+  padding: 100px 0;
+  justify-content: space-between;
+  text-align: center;
+  background-color: rgba(u.$color-secondary-dark, 0.6);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__title {
+    @include u.h2-style;
+    color: u.$color-brand-light;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+
+  &__btn {
+    font-size: 1.3rem;
+    padding: 7px 20px;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0 4px 6px rgba(u.$color-secondary-dark, 0.4);
+    }
+
+    &:active {
+      transform: scale(0.98); // Кнопка слегка вдавливается при клике
+    }
+
+    &--mail {
+      color: u.$color-secondary-dark;
+    }
+
+    &--subscribe {
+      color: u.$color-primary-light;
+      background-color: transparent;
+      border: 1px solid;
+      border-color: u.$color-primary-light;
+    }
+  }
+}
