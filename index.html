@@ -26,9 +26,7 @@
         </nav>
 
         <div class="header__right">
-          <button class="button header__shop-btn" type="button">
-            Shop Now
-          </button>
+          <button class="button pink-btn" type="button">Shop Now</button>
           <div class="header__icons">
             <a href="#">
               <svg width="20" height="20">
@@ -127,23 +125,73 @@
           </h5>
 
           <div class="collections-section__list">
+            <!-- 1 card -->
             <article class="collections-section__card">
-              <div class="collections-section__image"></div>
-              <h4>Scincare</h4>
-              <h5>Complete solutions for your skin</h5>
-              <a href="#">Learn more</a>
+              <div class="collections-section__image-wrap">
+                <picture>
+                  <source
+                    srcset="/images/collections1.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/images/collections1.jpg"
+                    alt="Skincare set"
+                    class="collections-section__image"
+                  />
+                </picture>
+              </div>
+
+              <div class="collections-section__content">
+                <h4 class="collections-section__card-title">Scincare</h4>
+                <p class="card-text-white">Complete solutions for your skin</p>
+                <a href="#" class="collections-section__link">Learn more</a>
+              </div>
             </article>
 
+            <!-- 2 card -->
             <article class="collections-section__card">
-              <h4>Makeup</h4>
-              <h5>Enhance your natural beauty</h5>
-              <a href="#">Learn more</a>
+              <div class="collections-section__image-wrap">
+                <picture>
+                  <source
+                    srcset="/images/collections2.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/images/collections2.jpg"
+                    alt="Skincare set"
+                    class="collections-section__image"
+                  />
+                </picture>
+              </div>
+
+              <div class="collections-section__content">
+                <h4 class="collections-section__card-title">Makeup</h4>
+                <p class="card-text-white">Enhance your natural beauty</p>
+                <a href="#" class="collections-section__link">Learn more</a>
+              </div>
             </article>
 
+            <!-- 3 card -->
             <article class="collections-section__card">
-              <h4>Fragrances</h4>
-              <h5>Exclusive scents for you</h5>
-              <a href="#">Learn more</a>
+              <div class="collections-section__image-wrap">
+                <picture>
+                  <source
+                    srcset="/images/collections3.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="/images/collections3.jpg"
+                    alt="Skincare set"
+                    class="collections-section__image"
+                  />
+                </picture>
+              </div>
+
+              <div class="collections-section__content">
+                <h4 class="collections-section__card-title">Fragrances</h4>
+                <p class="card-text-white">Exclusive scents for you</p>
+                <a href="#" class="collections-section__link">Learn more</a>
+              </div>
             </article>
           </div>
         </div>
@@ -151,20 +199,47 @@
 
       <!-- Our Story -->
 
-      <section>
-        <h2>Our Story</h2>
-        <h5>
+      <section class="story-section">
+        <h2 class="story-section__title">Our Story</h2>
+        <h5 class="story-section__subtitle">
           Discover a world of endless possibilities to create the perfect look
         </h5>
 
-        <h3>Meet Hadassah</h3>
-        <p>
-          We create cosmetics that reveal the natural beauty of every woman. Our
-          products combine the power of nature with the innovation of science.
-          Since 2018, we have been helping thousands of women across Europe feel
-          confident and radiate from within.
-        </p>
-        <button>Read More</button>
+        <div class="story-section__container">
+          <div class="story-section__grid">
+            <div class="story-section__card">
+              <h3 class="story-section__card-title">Meet Hadassah</h3>
+              <p>
+                We create cosmetics that reveal the natural beauty of every
+                woman. Our products combine the power of nature with the
+                innovation of science. Since 2018, we have been helping
+                thousands of women across Europe feel confident and radiate from
+                within.
+              </p>
+              <button class="button pink-btn">Read More</button>
+            </div>
+
+            <div class="story-section__image-main">
+              <picture>
+                <source srcset="./images/story1.webp" type="image/webp" />
+                <img
+                  src="./images/story1.jpg"
+                  alt="Cosmetic cream in the mountains"
+                />
+              </picture>
+            </div>
+
+            <div class="story-section__image-overlay">
+              <picture>
+                <source srcset="./images/story2.webp" type="image/webp" />
+                <img
+                  src="./images/story2.jpg"
+                  alt="Cosmetics on grass near waterfall"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Get 15% off -->

@@ -27,6 +27,11 @@
   &__link {
     color: u.$color-brand;
     font-size: 1.3rem;
+    transition: text-shadow 0.3s;
+
+    &:hover {
+      text-shadow: 0 4px 5px rgba(u.$color-secondary-dark, 0.5);
+    }
   }
 
   &__right {
@@ -34,17 +39,6 @@
     flex: 1.2;
     text-align: center;
     justify-content: space-evenly;
-  }
-
-  &__shop-btn {
-    background-color: u.$color-brand;
-    color: u.$color-primary-light;
-    font-size: 1.3rem;
-    padding: 7px 20px;
-
-    &:active {
-      transform: scale(0.98); // Кнопка слегка вдавливается при клике
-    }
   }
 
   &__icons {

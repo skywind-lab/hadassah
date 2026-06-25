@@ -1,3 +1,5 @@
+@use "../utils/index" as u;
+
 .button {
   display: flex;
   width: max-content; /* Принудительно фиксируем ширину по тексту */
@@ -8,4 +10,20 @@
   text-decoration: none;
   border-radius: 100px;
   backdrop-filter: blur(4px);
+}
+
+.pink-btn {
+  background-color: u.$color-brand;
+  color: u.$color-primary-light;
+  font-size: 1.3rem;
+  padding: 7px 20px;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 4px 6px rgba(u.$color-secondary-dark, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.98); // Кнопка слегка вдавливается при клике
+  }
 }

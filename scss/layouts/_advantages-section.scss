@@ -28,6 +28,11 @@
     padding: 30px;
     border: 2px solid rgba(u.$color-secondary-dark, 0.3);
     border-radius: 0 90px 0 90px;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0 4px 15px rgba(u.$color-secondary-dark, 0.6);
+    }
   }
 
   &__icon {

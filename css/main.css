@@ -63,6 +63,14 @@
   color: rgba(131, 102, 91, 0.7);
 }
 
+.card-text-white {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ebe0e0;
+}
+
 *,
 *::before,
 *::after {
@@ -156,6 +164,25 @@ select {
   backdrop-filter: blur(4px);
 }
 
+.pink-btn {
+  background-color: #da8b80;
+  color: #faf4ea;
+  font-size: 1.3rem;
+  padding: 7px 20px;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+.pink-btn:hover {
+  -webkit-box-shadow: 0 4px 6px rgba(131, 102, 91, 0.4);
+          box-shadow: 0 4px 6px rgba(131, 102, 91, 0.4);
+}
+.pink-btn:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
 .header {
   width: 100%;
   padding: 50px 0 30px; /* Добавляем "воздуха" сверху и снизу */
@@ -193,6 +220,11 @@ select {
 .header__link {
   color: #da8b80;
   font-size: 1.3rem;
+  -webkit-transition: text-shadow 0.3s;
+  transition: text-shadow 0.3s;
+}
+.header__link:hover {
+  text-shadow: 0 4px 5px rgba(131, 102, 91, 0.5);
 }
 .header__right {
   display: -webkit-box;
@@ -205,16 +237,6 @@ select {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-}
-.header__shop-btn {
-  background-color: #da8b80;
-  color: #faf4ea;
-  font-size: 1.3rem;
-  padding: 7px 20px;
-}
-.header__shop-btn:active {
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
 }
 .header__icons {
   display: -webkit-box;
@@ -313,6 +335,14 @@ select {
   padding: 30px;
   border: 2px solid rgba(131, 102, 91, 0.3);
   border-radius: 0 90px 0 90px;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+.advantages-section__card:hover {
+  -webkit-box-shadow: 0 4px 15px rgba(131, 102, 91, 0.6);
+          box-shadow: 0 4px 15px rgba(131, 102, 91, 0.6);
 }
 .advantages-section__icon {
   display: -webkit-box;
@@ -357,6 +387,7 @@ select {
 }
 .collections-section__subtitle {
   text-align: center;
+  margin-top: 20px;
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
@@ -371,7 +402,7 @@ select {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 120px;
-  gap: 30px;
+  gap: 20px;
 }
 .collections-section__card {
   display: -webkit-box;
@@ -384,8 +415,6 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-width: 440px;
-  height: 625px;
   border-radius: 50px;
   overflow: hidden;
   -webkit-box-shadow: 0 4px 5px rgba(131, 102, 91, 0.25);
@@ -394,16 +423,135 @@ select {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  gap: 10px;
   background-color: #a9af8d;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+.collections-section__card:hover {
+  -webkit-box-shadow: 0 4px 15px rgba(131, 102, 91, 0.85);
+          box-shadow: 0 4px 15px rgba(131, 102, 91, 0.85);
+}
+.collections-section__image-wrap {
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+  border-radius: 50px;
 }
 .collections-section__image {
   width: 100%;
-  height: 460px;
-  background-image: -webkit-image-set(url("/images/collections1.webp") type("image/webp"), url("/images/collections1.jpg") type("image/jpeg"));
-  background-image: image-set(url("/images/collections1.webp") type("image/webp"), url("/images/collections1.jpg") type("image/jpeg"));
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 50px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.collections-section__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  gap: 10px;
+}
+.collections-section__card-title {
+  font-family: "Inter", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #faf4ea;
+}
+.collections-section__link {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(250, 244, 234, 0.5);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.collections-section__link:hover {
+  color: #faf4ea;
+}
+
+.story-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 100px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.story-section__container {
+  background-color: #f1d3b9;
+  margin-top: 100px;
+}
+.story-section__title {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #da8b80;
+}
+.story-section__subtitle {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: rgba(131, 102, 91, 0.8);
+}
+.story-section__grid {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  height: 800px;
+}
+.story-section__card {
+  grid-column: 3/8;
+  grid-row: 4/15;
+  background: #ebe0e0;
+  padding: 40px;
+  z-index: 3;
+}
+.story-section__card-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #83665b;
+}
+.story-section__image-main {
+  grid-column: 7/13;
+  grid-row: 2/14;
+  z-index: 1;
+}
+.story-section__image-main img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.story-section__image-overlay {
+  grid-column: 11/15;
+  grid-row: 8/16;
+  z-index: 2;
+}
+.story-section__image-overlay img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */
