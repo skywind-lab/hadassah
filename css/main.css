@@ -258,8 +258,8 @@ select {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: -webkit-image-set(url("/images/hero-image.webp") type("image/webp"), url("/images/hero-image.jpg") type("image/jpeg"));
-  background-image: image-set(url("/images/hero-image.webp") type("image/webp"), url("/images/hero-image.jpg") type("image/jpeg"));
+  background-image: -webkit-image-set(url("../images/hero-image.webp") type("image/webp"), url("../images/hero-image.jpg") type("image/jpeg"));
+  background-image: image-set(url("../images/hero-image.webp") type("image/webp"), url("../images/hero-image.jpg") type("image/jpeg"));
 }
 .hero-section__button {
   margin: 0 auto;

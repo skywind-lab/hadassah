@@ -7,8 +7,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-image: image-set(
-    url("/images/hero-image.webp") type("image/webp"),
-    url("/images/hero-image.jpg") type("image/jpeg")
+    url("../images/hero-image.webp") type("image/webp"),
+    url("../images/hero-image.jpg") type("image/jpeg")
   );
 
   &__button {
