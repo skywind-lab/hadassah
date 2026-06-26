@@ -1,7 +1,7 @@
 @use "../utils/index" as u;
 
 .getoff-section {
-  padding: 100px 0;
+  padding: 80px 0;
   justify-content: space-between;
   text-align: center;
   background-color: rgba(u.$color-secondary-dark, 0.6);
@@ -9,7 +9,7 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
   }
 
   &__title {
