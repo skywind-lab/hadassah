@@ -71,6 +71,135 @@
   color: #ebe0e0;
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Общий контейнер  */
+.newsletter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Сама форма */
+}
+.newsletter__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px; /* Расстояние между инпутом и кнопкой */
+  width: 100%;
+}
+.newsletter {
+  /* Поле ввода (E-mail) */
+}
+.newsletter__input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 10px 24px;
+  border: 1px solid #da8b80;
+  border-radius: 20px;
+  background-color: #ffffff;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  /* Плейсхолдер (текст "E-mail") */
+}
+.newsletter__input::-webkit-input-placeholder {
+  color: rgba(131, 102, 91, 0.7); /* Цвет подсказки */
+}
+.newsletter__input::-moz-placeholder {
+  color: rgba(131, 102, 91, 0.7); /* Цвет подсказки */
+}
+.newsletter__input:-ms-input-placeholder {
+  color: rgba(131, 102, 91, 0.7); /* Цвет подсказки */
+}
+.newsletter__input::-ms-input-placeholder {
+  color: rgba(131, 102, 91, 0.7); /* Цвет подсказки */
+}
+.newsletter__input::placeholder {
+  color: rgba(131, 102, 91, 0.7); /* Цвет подсказки */
+}
+.newsletter__input {
+  /* Эффект при клике на поле ввода */
+}
+.newsletter__input:focus {
+  border-color: #83665b;
+}
+.newsletter__input:focus::-webkit-input-placeholder {
+  color: rgba(131, 102, 91, 0.4);
+}
+.newsletter__input:focus::-moz-placeholder {
+  color: rgba(131, 102, 91, 0.4);
+}
+.newsletter__input:focus:-ms-input-placeholder {
+  color: rgba(131, 102, 91, 0.4);
+}
+.newsletter__input:focus::-ms-input-placeholder {
+  color: rgba(131, 102, 91, 0.4);
+}
+.newsletter__input:focus::placeholder {
+  color: rgba(131, 102, 91, 0.4);
+}
+.newsletter {
+  /* Кнопка со стрелкой */
+}
+.newsletter__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 64px;
+  height: 50px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #da8b80; /* Цвет кнопки */
+  border: none;
+  border-radius: 20px; /* Скругление кнопки */
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.1s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.1s ease;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  transition: background-color 0.3s ease, transform 0.1s ease, -webkit-transform 0.1s ease;
+  /* Эффекты при наведении и нажатии на кнопку */
+}
+.newsletter__btn:hover {
+  background-color: rgba(218, 139, 128, 0.7);
+}
+.newsletter__btn:active {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96); /* Легкий эффект нажатия */
+}
+.newsletter__arrow {
+  color: #faf4ea; /* Цвет стрелочки */
+  font-size: 24px;
+}
+
 *,
 *::before,
 *::after {
@@ -638,15 +767,15 @@ select {
 
 .footer {
   background-color: rgba(218, 139, 128, 0.3);
+  padding-bottom: 100px;
 }
 .footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 80px 0 100px;
-  gap: 80px;
 }
-.footer__first {
+.footer__left {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -671,4 +800,55 @@ select {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+}
+.footer__menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #da8b80;
+  gap: 10px;
+}
+.footer__contacts {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.footer__right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.footer__title {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #83665b;
+}
+.footer__rights {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #83665b;
 }/*# sourceMappingURL=main.css.map */

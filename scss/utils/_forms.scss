@@ -1,0 +1,73 @@
+@use "./index" as u;
+
+/* Общий контейнер  */
+.newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Сама форма */
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Расстояние между инпутом и кнопкой */
+    width: 100%;
+  }
+
+  /* Поле ввода (E-mail) */
+  &__input {
+    flex-grow: 1;
+    @include u.body-text;
+    padding: 10px 24px;
+    border: 1px solid u.$color-brand;
+    border-radius: 20px;
+    background-color: #ffffff;
+    outline: none;
+    transition: all 0.3s ease;
+
+    /* Плейсхолдер (текст "E-mail") */
+    &::placeholder {
+      color: rgba(u.$color-secondary-dark, 0.7); /* Цвет подсказки */
+    }
+
+    /* Эффект при клике на поле ввода */
+    &:focus {
+      border-color: u.$color-secondary-dark;
+    }
+
+    &:focus::placeholder {
+      color: rgba(u.$color-secondary-dark, 0.4);
+    }
+  }
+
+  /* Кнопка со стрелкой */
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 50px;
+    @include u.body-text;
+    background-color: u.$color-brand; /* Цвет кнопки */
+    border: none;
+    border-radius: 20px; /* Скругление кнопки */
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      transform 0.1s ease;
+
+    /* Эффекты при наведении и нажатии на кнопку */
+    &:hover {
+      background-color: rgba(u.$color-brand, 0.7);
+    }
+
+    &:active {
+      transform: scale(0.96); /* Легкий эффект нажатия */
+    }
+  }
+
+  &__arrow {
+    color: u.$color-primary-light; /* Цвет стрелочки */
+    font-size: 24px;
+  }
+}

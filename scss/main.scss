@@ -4,6 +4,8 @@
 @use "utils/typography";
 @use "utils/index";
 @use "utils/mixins";
+@use "utils/visually-hidden";
+@use "utils/forms";
 
 // 2. Базовые сбросы
 @use "base";

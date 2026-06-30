@@ -274,7 +274,7 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__first">
+        <div class="footer__left">
           <a href="./index.html">
             <img src="./images/logo.svg" alt="Logo Hadassah" />
           </a>
@@ -302,7 +302,7 @@
           </div>
         </div>
 
-        <ul class="">
+        <ul class="footer__menu">
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Skincare</a></li>
@@ -311,15 +311,35 @@
           <li><a href="#">Contact</a></li>
         </ul>
 
-        <!-- здесь надо бы телефон, адрес и имэйл, как их вставлять есть в уроке 3 -->
+        <!-- телефон, адрес и имэйл, как их вставлять есть в уроке 3 -->
+        <div class="footer__contacts">
+          <p>telephone</p>
+          <p>address</p>
+          <p>e-mail</p>
+        </div>
 
-        <h5>Newsletter</h5>
-        <p>Get exclusive offers and beauty tips</p>
-        <!-- subscribe field + arow button -->
+        <div class="footer__right">
+          <h5 class="footer__title">Newsletter</h5>
+          <p class="footer__slogan">Get exclusive offers and beauty tips</p>
 
-        <a href="#">Privacy policy</a>
+          <!-- subscribe field + arow button -->
+          <div class="newsletter">
+            <form class="newsletter__form">
+              <input
+                type="email"
+                placeholder="E-mail"
+                required
+                class="newsletter__input"
+              />
+              <button type="submit" class="newsletter__btn" aria-label="Send">
+                <span class="newsletter__arrow">→</span>
+              </button>
+            </form>
+          </div>
+          <a href="#">Privacy policy</a>
+        </div>
       </div>
-      <p>© 2026 Hadassah. All rights reserved.</p>
+      <p class="footer__rights">© 2026 Hadassah. All rights reserved.</p>
     </footer>
   </body>
 </html>
