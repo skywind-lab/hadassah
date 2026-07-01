@@ -4,26 +4,50 @@
   width: 100%;
   padding: 50px 0 30px; /* Добавляем "воздуха" сверху и снизу */
 
+  &__burger {
+    background-color: transparent;
+    border: none;
+    fill: u.$color-brand;
+
+    @media screen and (min-width: u.$bp-desktop) {
+      display: none;
+    }
+  }
+
   &__layout {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Элементы распределятся красиво и равномерно */
-    gap: 2rem;
+    gap: 1rem;
+
+    @media screen and (min-width: u.$bp-desktop) {
+      gap: 2rem;
+    }
   }
 
   &__logo {
-    flex: 1;
-    /* Главный секрет плавности — transition */
-    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    margin-left: 1rem;
 
-    &:hover {
-      /* Увеличиваем элемент на 5% (1.05) */
-      transform: scale(1.05);
+    @media screen and (min-width: u.$bp-tablet) {
+      margin-left: 2rem;
     }
 
-    &:active {
-      /* При клике возвращаем или даже чуть утапливаем элемент */
-      transform: scale(0.98);
+    @media screen and (min-width: u.$bp-desktop) {
+      flex: 1;
+      margin-left: 0;
+      /* Главный секрет плавности — transition */
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+      &:hover {
+        /* Увеличиваем элемент на 5% (1.05) */
+        transform: scale(1.05);
+      }
+
+      &:active {
+        /* При клике возвращаем или даже чуть утапливаем элемент */
+        transform: scale(0.98);
+      }
     }
   }
 
@@ -32,8 +56,12 @@
   }
 
   &__menu {
-    display: flex;
-    justify-content: space-evenly;
+    display: none;
+
+    @media screen and (min-width: u.$bp-desktop) {
+      display: flex;
+      justify-content: space-evenly;
+    }
   }
 
   &__link {
@@ -55,16 +83,29 @@
 
   &__right {
     display: flex;
-    flex: 1.2;
-    text-align: center;
-    justify-content: space-evenly;
+    margin-right: 1rem;
+
+    @media screen and (min-width: u.$bp-tablet) {
+      margin-right: 2rem;
+    }
+
+    @media screen and (min-width: u.$bp-desktop) {
+      flex: 1.2;
+      text-align: center;
+      justify-content: space-evenly;
+      margin-right: 0;
+    }
   }
 
   &__icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    fill: u.$color-secondary-dark;
+    display: none;
+
+    @media screen and (min-width: u.$bp-desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      fill: u.$color-secondary-dark;
+    }
   }
 }
