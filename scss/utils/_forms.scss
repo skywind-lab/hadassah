@@ -53,12 +53,12 @@
     border-radius: 20px; /* Скругление кнопки */
     cursor: pointer;
     transition:
-      background-color 0.3s ease,
+      box-shadow 0.3s,
       transform 0.1s ease;
 
     /* Эффекты при наведении и нажатии на кнопку */
     &:hover {
-      background-color: rgba(u.$color-brand, 0.7);
+      box-shadow: 0 4px 5px rgba(u.$color-secondary-dark, 0.4);
     }
 
     &:active {

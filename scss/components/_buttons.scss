@@ -10,6 +10,15 @@
   text-decoration: none;
   border-radius: 100px;
   backdrop-filter: blur(4px);
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 4px 10px rgba(u.$color-secondary-dark, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.98); // Кнопка слегка вдавливается при клике
+  }
 }
 
 .pink-btn {
@@ -17,13 +26,4 @@
   color: u.$color-primary-light;
   font-size: 1.3rem;
   padding: 7px 20px;
-  transition: box-shadow 0.3s;
-
-  &:hover {
-    box-shadow: 0 4px 6px rgba(u.$color-secondary-dark, 0.4);
-  }
-
-  &:active {
-    transform: scale(0.98); // Кнопка слегка вдавливается при клике
-  }
 }
