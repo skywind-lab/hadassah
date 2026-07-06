@@ -17,8 +17,8 @@
 // Использовать: @include m.flex-center;
 @mixin flex-center {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 @mixin size($width, $height) {

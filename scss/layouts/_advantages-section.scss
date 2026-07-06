@@ -2,32 +2,33 @@
 
 .advantages-section {
   display: flex;
-  padding: 180px 0 100px;
   justify-content: space-between;
+  padding: 180px 0 100px;
 
   &__title {
-    text-align: center;
-    @include u.h2-style;
     color: u.$color-brand;
+    text-align: center;
+
+    @include u.h2-style;
   }
 
   &__list {
     display: flex;
+    gap: 30px;
     justify-content: space-between;
     padding-top: 120px;
-    gap: 30px;
   }
 
   &__card {
     display: flex;
     flex: 1; // чтобы каждая карточка брала одинаковую ширину
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     gap: 10px;
+    align-items: center;
     padding: 30px;
+    text-align: center;
     border: 2px solid rgba(u.$color-secondary-dark, 0.3);
-    border-radius: 0 90px 0 90px;
+    border-radius: 0 90px;
     transition: box-shadow 0.3s;
 
     &:hover {
@@ -41,13 +42,14 @@
     justify-content: center;
     width: 70px;
     height: 70px;
-    border-radius: 50%;
     background-color: rgba(u.$color-secondary-dark, 0.2);
+    border-radius: 50%;
     fill: u.$color-secondary-dark;
   }
 
   &__subtitle {
     @include u.h5-style;
+
     color: u.$color-secondary-dark;
   }
 }

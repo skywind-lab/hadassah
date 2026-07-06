@@ -3,53 +3,59 @@
 .story-section {
   display: flex;
   flex-direction: column;
-  padding: 100px 0;
   justify-content: space-between;
+  padding: 100px 0;
 
   &__container {
-    background-color: u.$color-yellow;
     margin-top: 100px;
+    background-color: u.$color-yellow;
   }
 
   &__title {
-    text-align: center;
-    @include u.h2-style;
     color: u.$color-brand;
+    text-align: center;
+
+    @include u.h2-style;
   }
 
   &__subtitle {
-    text-align: center;
     margin-top: 20px;
-    @include u.h5-style;
     color: rgba(u.$color-secondary-dark, 0.8);
+    text-align: center;
+
+    @include u.h5-style;
   }
 
   &__grid {
     display: grid;
-    // Создаем 16 равных колонок, как на макете
-    grid-template-columns: repeat(16, 1fr);
+
     // Теперь 16 рядов
     grid-template-rows: repeat(16, 1fr);
+
+    // Создаем 16 равных колонок, как на макете
+    grid-template-columns: repeat(16, 1fr);
+
     // Задаем фиксированную ширину
     height: 800px;
   }
 
   &__card {
+    z-index: 3; // Самый верхний слой среди контента
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    grid-column: 3 / 8; // Занимает с 3 по 8 колонку
     grid-row: 5 / 15;
-    background: u.$color-brand-light;
+    grid-column: 3 / 8; // Занимает с 3 по 8 колонку
+    justify-content: space-evenly;
     padding: 40px 60px;
-    z-index: 3; // Самый верхний слой среди контента
+    background: u.$color-brand-light;
   }
 
   &__card-title {
-    text-align: center;
     margin-bottom: 20px;
-    @include u.h3-style;
     color: u.$color-secondary-dark;
+    text-align: center;
+
+    @include u.h3-style;
   }
 
   &__text {
@@ -61,9 +67,9 @@
   }
 
   &__image-main {
-    grid-column: 7 / 13; // Начинается под карточкой, уходит вправо
-    grid-row: 2 / 14;
     z-index: 1; // Базовый слой
+    grid-row: 2 / 14;
+    grid-column: 7 / 13; // Начинается под карточкой, уходит вправо
   }
 
   &__image-main img {
@@ -73,9 +79,9 @@
   }
 
   &__image-overlay {
-    grid-column: 11 / 15;
-    grid-row: 8 / 16;
     z-index: 2;
+    grid-row: 8 / 16;
+    grid-column: 11 / 15;
   }
 
   &__image-overlay img {

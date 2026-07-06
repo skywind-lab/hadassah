@@ -1,62 +1,62 @@
 @charset "UTF-8";
 /* tiro-telugu-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Tiro Telugu";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/tiro-telugu-v7-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 }
 /* inter-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
+  font-family: Inter;
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/inter-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 }
 /* inter-italic - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
+  font-family: Inter;
   font-style: italic;
   font-weight: 400;
   src: url("../fonts/inter-v20-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 }
 /* inter-500 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
+  font-family: Inter;
   font-style: normal;
   font-weight: 500;
   src: url("../fonts/inter-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 }
 /* inter-500italic - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
+  font-family: Inter;
   font-style: italic;
   font-weight: 500;
   src: url("../fonts/inter-v20-latin-500italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 }
 /* inter-700 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
+  font-family: Inter;
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/inter-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 }
 /* inter-700italic - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Inter";
+  font-family: Inter;
   font-style: italic;
   font-weight: 700;
   src: url("../fonts/inter-v20-latin-700italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 }
 .card-text {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -64,7 +64,7 @@
 }
 
 .card-text-white {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.5;
@@ -73,8 +73,8 @@
 
 .visually-hidden {
   position: absolute;
-  left: -10000px;
   top: auto;
+  left: -10000px;
   width: 1px;
   height: 1px;
   overflow: hidden;
@@ -85,22 +85,22 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   /* Сама форма */
 }
 .newsletter__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 16px; /* Расстояние между инпутом и кнопкой */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 16px; /* Расстояние между инпутом и кнопкой */
   width: 100%;
 }
 .newsletter {
@@ -110,17 +110,17 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  font-family: "Inter", sans-serif;
+  padding: 10px 24px;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #da8b80;
+  border-radius: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: Inter, sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
-  padding: 10px 24px;
-  border: 1px solid #da8b80;
-  border-radius: 20px;
-  background-color: #ffffff;
-  outline: none;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
   /* Плейсхолдер (текст "E-mail") */
 }
 .newsletter__input::-webkit-input-placeholder {
@@ -166,26 +166,26 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 64px;
   height: 50px;
-  font-family: "Inter", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 400;
-  line-height: 1.5;
+  cursor: pointer;
   background-color: #da8b80; /* Цвет кнопки */
   border: none;
   border-radius: 20px; /* Скругление кнопки */
-  cursor: pointer;
   -webkit-transition: -webkit-box-shadow 0.3s, -webkit-transform 0.1s ease;
   transition: -webkit-box-shadow 0.3s, -webkit-transform 0.1s ease;
   transition: box-shadow 0.3s, transform 0.1s ease;
   transition: box-shadow 0.3s, transform 0.1s ease, -webkit-box-shadow 0.3s, -webkit-transform 0.1s ease;
+  font-family: Inter, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
   /* Эффекты при наведении и нажатии на кнопку */
 }
 .newsletter__btn:hover {
@@ -197,8 +197,8 @@
           transform: scale(0.96); /* Легкий эффект нажатия */
 }
 .newsletter__arrow {
-  color: #faf4ea; /* Цвет стрелочки */
   font-size: 24px;
+  color: #faf4ea; /* Цвет стрелочки */
 }
 
 .icon {
@@ -240,20 +240,19 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 body {
-  color: #252424;
-  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  font-family: Inter, sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  color: #252424;
+  text-rendering: optimizespeed;
 }
 
 ul,
@@ -262,14 +261,14 @@ ol {
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
   display: inline-block;
+  color: inherit;
+  text-decoration: none;
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -285,26 +284,26 @@ select {
 .container {
   width: 100%;
   max-width: 80.5rem; /* 1288px */
-  margin: 0 auto;
   padding: 0 1rem; /* 16px, чуть больше стандартных 15px */
+  margin: 0 auto;
 }
 
 .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content; /* Принудительно фиксируем ширину по тексту */
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; /* Центрируем текст внутри флекса */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: none;
-  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* Центрируем текст внутри флекса */
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content; /* Принудительно фиксируем ширину по тексту */
   text-decoration: none;
+  cursor: pointer;
+  border: none;
   border-radius: 100px;
   backdrop-filter: blur(4px);
   -webkit-transition: -webkit-box-shadow 0.3s;
@@ -322,43 +321,38 @@ select {
 }
 
 .pink-btn {
-  background-color: #da8b80;
-  color: #faf4ea;
-  font-size: 1rem;
   padding: 7px 20px;
+  font-size: 1rem;
+  color: #faf4ea;
+  background-color: #da8b80;
 }
 @media screen and (min-width: 768px) {
   .pink-btn {
-    font-size: 1.3rem;
     padding: 7px 20px;
+    font-size: 1.3rem;
   }
 }
 
 .header {
   width: 100%;
-  padding: 50px 0 30px; /* Добавляем "воздуха" сверху и снизу */
-}
-.header__burger {
-  background-color: transparent;
-  border: none;
-  fill: #da8b80;
+  padding: 30px 0; /* Добавляем "воздуха" сверху и снизу */
 }
 @media screen and (min-width: 1024px) {
-  .header__burger {
-    display: none;
+  .header {
+    padding: 50px 0 30px;
   }
 }
 .header__layout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; /* Элементы распределятся красиво и равномерно */
-  gap: 1rem;
 }
 @media screen and (min-width: 1024px) {
   .header__layout {
@@ -418,8 +412,8 @@ select {
   }
 }
 .header__link {
-  color: #da8b80;
   font-size: 1.3rem;
+  color: #da8b80;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   transition: -webkit-transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -452,11 +446,11 @@ select {
     -webkit-box-flex: 1.2;
         -ms-flex: 1.2;
             flex: 1.2;
-    text-align: center;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     margin-right: 0;
+    text-align: center;
   }
 }
 .header__icons {
@@ -467,13 +461,13 @@ select {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 10px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    gap: 10px;
     fill: #83665b;
   }
 }
@@ -481,24 +475,24 @@ select {
 .hero-section {
   min-height: 85vh;
   padding-top: 30px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   background-image: -webkit-image-set(url("../images/hero-image.webp") type("image/webp"), url("../images/hero-image.jpg") type("image/jpeg"));
   background-image: image-set(url("../images/hero-image.webp") type("image/webp"), url("../images/hero-image.jpg") type("image/jpeg"));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-section__button {
-  margin: 0 auto;
-  color: #83665b;
-  font-size: 1.7rem;
   padding: 7px 50px;
+  margin: 0 auto;
+  font-size: 1.7rem;
+  color: #83665b;
   background-color: rgba(250, 244, 234, 0.8);
   -webkit-box-shadow: 0 4px 5px rgba(131, 102, 91, 0.25);
           box-shadow: 0 4px 5px rgba(131, 102, 91, 0.25); /* Мягкая тень под цвет фона */
 }
 .hero-section__subtitle {
   margin-top: 180px;
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.9rem;
   font-weight: 400;
   line-height: 1.5;
@@ -519,28 +513,28 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 180px 0 100px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 180px 0 100px;
 }
 .advantages-section__title {
+  color: #da8b80;
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.2;
-  color: #da8b80;
 }
 .advantages-section__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 30px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 120px;
-  gap: 30px;
 }
 .advantages-section__card {
   display: -webkit-box;
@@ -553,14 +547,14 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
-  gap: 10px;
   padding: 30px;
+  text-align: center;
   border: 2px solid rgba(131, 102, 91, 0.3);
-  border-radius: 0 90px 0 90px;
+  border-radius: 0 90px;
   -webkit-transition: -webkit-box-shadow 0.3s;
   transition: -webkit-box-shadow 0.3s;
   transition: box-shadow 0.3s;
@@ -582,12 +576,12 @@ select {
           justify-content: center;
   width: 70px;
   height: 70px;
-  border-radius: 50%;
   background-color: rgba(131, 102, 91, 0.2);
+  border-radius: 50%;
   fill: #83665b;
 }
 .advantages-section__subtitle {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.2;
@@ -598,37 +592,37 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 100px 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 100px 0;
 }
 .collections-section__title {
+  color: #da8b80;
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.2;
-  color: #da8b80;
 }
 .collections-section__subtitle {
-  text-align: center;
   margin-top: 20px;
-  font-family: "Inter", sans-serif;
+  color: rgba(131, 102, 91, 0.8);
+  text-align: center;
+  font-family: Inter, sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.2;
-  color: rgba(131, 102, 91, 0.8);
 }
 .collections-section__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 120px;
-  gap: 20px;
 }
 .collections-section__card {
   display: -webkit-box;
@@ -641,15 +635,15 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 50px;
-  overflow: hidden;
-  -webkit-box-shadow: 0 4px 5px rgba(131, 102, 91, 0.25);
-          box-shadow: 0 4px 5px rgba(131, 102, 91, 0.25); /* Мягкая тень под цвет фона */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
   text-align: center;
   background-color: #a9af8d;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 4px 5px rgba(131, 102, 91, 0.25);
+          box-shadow: 0 4px 5px rgba(131, 102, 91, 0.25); /* Мягкая тень под цвет фона */
   -webkit-transition: -webkit-box-shadow 0.3s;
   transition: -webkit-box-shadow 0.3s;
   transition: box-shadow 0.3s;
@@ -679,19 +673,19 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 10px;
   padding: 20px;
   text-align: center;
-  gap: 10px;
 }
 .collections-section__card-title {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.7rem;
   font-weight: 500;
   line-height: 1.2;
   color: #faf4ea;
 }
 .collections-section__link {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -711,39 +705,40 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 100px 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 100px 0;
 }
 .story-section__container {
-  background-color: #f1d3b9;
   margin-top: 100px;
+  background-color: #f1d3b9;
 }
 .story-section__title {
+  color: #da8b80;
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.2;
-  color: #da8b80;
 }
 .story-section__subtitle {
-  text-align: center;
   margin-top: 20px;
-  font-family: "Inter", sans-serif;
+  color: rgba(131, 102, 91, 0.8);
+  text-align: center;
+  font-family: Inter, sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.2;
-  color: rgba(131, 102, 91, 0.8);
 }
 .story-section__grid {
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(16, 1fr);
   height: 800px;
 }
 .story-section__card {
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -751,26 +746,25 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  grid-row: 5/15;
+  grid-column: 3/8;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  grid-column: 3/8;
-  grid-row: 5/15;
-  background: #ebe0e0;
   padding: 40px 60px;
-  z-index: 3;
+  background: #ebe0e0;
 }
 .story-section__card-title {
-  text-align: center;
   margin-bottom: 20px;
-  font-family: "Inter", sans-serif;
+  color: #83665b;
+  text-align: center;
+  font-family: Inter, sans-serif;
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.2;
-  color: #83665b;
 }
 .story-section__text {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -780,9 +774,9 @@ select {
       align-self: flex-end;
 }
 .story-section__image-main {
-  grid-column: 7/13;
-  grid-row: 2/14;
   z-index: 1;
+  grid-row: 2/14;
+  grid-column: 7/13;
 }
 .story-section__image-main img {
   width: 100%;
@@ -791,9 +785,9 @@ select {
      object-fit: cover;
 }
 .story-section__image-overlay {
-  grid-column: 11/15;
-  grid-row: 8/16;
   z-index: 2;
+  grid-row: 8/16;
+  grid-column: 11/15;
 }
 .story-section__image-overlay img {
   width: 100%;
@@ -803,10 +797,10 @@ select {
 }
 
 .getoff-section {
-  padding: 80px 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 80px 0;
   text-align: center;
   background-color: rgba(131, 102, 91, 0.6);
 }
@@ -821,7 +815,7 @@ select {
   gap: 40px;
 }
 .getoff-section__title {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -831,14 +825,14 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 100px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 100px;
 }
 .getoff-section__btn {
-  font-size: 1.3rem;
   padding: 7px 20px;
+  font-size: 1.3rem;
   -webkit-transition: -webkit-box-shadow 0.3s;
   transition: -webkit-box-shadow 0.3s;
   transition: box-shadow 0.3s;
@@ -866,10 +860,10 @@ select {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
   width: 100%;
   height: 100%;
   background-color: #f1d3b9;
-  z-index: 100;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition: -webkit-transform 0.3s;
@@ -886,10 +880,65 @@ select {
   top: 16px;
   right: 24px;
 }
+.mobile-menu__block {
+  position: absolute; /* Вырываем из потока */
+  top: 7.5rem; /* Отступ от верхнего края страницы */
+  z-index: 10; /* Чтобы кнопка не спряталась под хедер */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  height: 35px;
+  background-color: rgba(218, 139, 128, 0.5);
+}
+@media screen and (min-width: 1024px) {
+  .mobile-menu__block {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mobile-menu__block {
+    top: 6.5rem;
+  }
+}
+.mobile-menu__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 2rem;
+  fill: #fff;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu__icons {
+    margin-left: 3rem;
+  }
+}
+.mobile-menu__btn {
+  margin-right: 2rem;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  fill: #fff;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu__btn {
+    margin-right: 3rem;
+  }
+}
 
 .footer {
-  background-color: rgba(218, 139, 128, 0.3);
   padding-bottom: 100px;
+  background-color: rgba(218, 139, 128, 0.3);
 }
 .footer__container {
   display: -webkit-box;
@@ -898,12 +947,12 @@ select {
   padding: 80px 0 100px;
 }
 .footer__left {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -931,7 +980,7 @@ select {
           transform: scale(0.98);
 }
 .footer__slogan {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -944,23 +993,23 @@ select {
   gap: 30px;
 }
 .footer__menu {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 10px;
   padding-left: 60px;
-  font-family: "Inter", sans-serif;
+  color: #da8b80;
+  font-family: Inter, sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #da8b80;
-  gap: 10px;
 }
 .footer__link {
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -985,12 +1034,12 @@ select {
           flex: 1;
 }
 .footer__right {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -998,25 +1047,25 @@ select {
   gap: 20px;
 }
 .footer__title {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.2;
   color: #83665b;
 }
 .footer__privacy {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.5;
-  color: rgba(131, 102, 91, 0.8);
   margin-top: 40px;
+  color: rgba(131, 102, 91, 0.8);
 }
 .footer__rights {
+  color: #83665b;
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #83665b;
 }/*# sourceMappingURL=main.css.map */

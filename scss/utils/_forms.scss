@@ -3,27 +3,28 @@
 /* Общий контейнер  */
 .newsletter {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   /* Сама форма */
   &__form {
     display: flex;
-    align-items: center;
     gap: 16px; /* Расстояние между инпутом и кнопкой */
+    align-items: center;
     width: 100%;
   }
 
   /* Поле ввода (E-mail) */
   &__input {
     flex-grow: 1;
-    @include u.body-text;
     padding: 10px 24px;
+    outline: none;
+    background-color: #fff;
     border: 1px solid u.$color-brand;
     border-radius: 20px;
-    background-color: #ffffff;
-    outline: none;
     transition: all 0.3s ease;
+
+    @include u.body-text;
 
     /* Плейсхолдер (текст "E-mail") */
     &::placeholder {
@@ -43,18 +44,19 @@
   /* Кнопка со стрелкой */
   &__btn {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 64px;
     height: 50px;
-    @include u.body-text;
+    cursor: pointer;
     background-color: u.$color-brand; /* Цвет кнопки */
     border: none;
     border-radius: 20px; /* Скругление кнопки */
-    cursor: pointer;
     transition:
       box-shadow 0.3s,
       transform 0.1s ease;
+
+    @include u.body-text;
 
     /* Эффекты при наведении и нажатии на кнопку */
     &:hover {
@@ -67,7 +69,7 @@
   }
 
   &__arrow {
-    color: u.$color-primary-light; /* Цвет стрелочки */
     font-size: 24px;
+    color: u.$color-primary-light; /* Цвет стрелочки */
   }
 }

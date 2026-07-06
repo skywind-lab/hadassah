@@ -9,20 +9,6 @@
   </head>
   <body>
     <header class="header">
-      <!-- Burger -->
-      <button class="header__burger menu-btn-open" type="button">
-        <svg width="20" height="20">
-          <use href="./images/icons.svg#icon-menu-1"></use>
-        </svg>
-      </button>
-
-      <div class="mobile-menu">
-        <button class="mobile-menu__btn-close menu-btn-close" type="button">
-          Close
-        </button>
-      </div>
-
-      <!-- Desktop biginning -->
       <div class="container header__layout">
         <div class="header__logo">
           <a href="./index.html">
@@ -43,6 +29,7 @@
 
         <div class="header__right">
           <button class="button pink-btn" type="button">Shop Now</button>
+
           <div class="header__icons">
             <a href="#" class="icon">
               <svg width="20" height="20">
@@ -63,6 +50,39 @@
         </div>
       </div>
     </header>
+
+    <!-- Burger -->
+    <div class="mobile-menu__block">
+      <div class="mobile-menu__icons">
+        <a href="#" class="icon">
+          <svg width="20" height="20">
+            <use href="./images/icons.svg#icon-search"></use>
+          </svg>
+        </a>
+        <a href="#" class="icon">
+          <svg width="20" height="20">
+            <use href="./images/icons.svg#icon-account"></use>
+          </svg>
+        </a>
+        <a href="#" class="icon">
+          <svg width="20" height="20">
+            <use href="./images/icons.svg#icon-buy"></use>
+          </svg>
+        </a>
+      </div>
+
+      <button class="mobile-menu__btn menu-btn-open" type="button">
+        <svg width="20" height="20">
+          <use href="./images/icons.svg#icon-menu-1"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu">
+      <button class="mobile-menu__btn-close menu-btn-close" type="button">
+        Close
+      </button>
+    </div>
 
     <main>
       <!-- Hadassah -->

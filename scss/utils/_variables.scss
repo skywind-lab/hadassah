@@ -10,11 +10,17 @@ $color-yellow: #f1d3b9;
 $color-brand-light: #ebe0e0;
 
 // 2. Брейкпоинты (контрольные точки экрана)
+// Самые мелкие
+$bp-small: 400px;
+
 // Мобильные
 $bp-mobile: 480px;
+
 // Планшеты
 $bp-tablet: 768px;
+
 // Ноутбуки
 $bp-desktop: 1024px;
+
 // Большие мониторы
 $bp-large: 1440px;

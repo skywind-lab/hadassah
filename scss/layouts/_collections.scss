@@ -2,39 +2,41 @@
 
 .collections-section {
   display: flex;
-  padding: 100px 0;
   justify-content: space-between;
+  padding: 100px 0;
 
   &__title {
-    text-align: center;
-    @include u.h2-style;
     color: u.$color-brand;
+    text-align: center;
+
+    @include u.h2-style;
   }
 
   &__subtitle {
-    text-align: center;
     margin-top: 20px;
-    @include u.h5-style;
     color: rgba(u.$color-secondary-dark, 0.8);
+    text-align: center;
+
+    @include u.h5-style;
   }
 
   &__list {
     display: flex;
+    gap: 20px;
     justify-content: space-between;
     padding-top: 120px;
-    gap: 20px;
   }
 
   &__card {
     display: flex;
     flex: 1; // чтобы каждая карточка брала одинаковую ширину
     flex-direction: column;
-    border-radius: 50px;
-    overflow: hidden;
-    box-shadow: 0 4px 5px rgba(u.$color-secondary-dark, 0.25); /* Мягкая тень под цвет фона */
     align-items: center;
+    overflow: hidden;
     text-align: center;
     background-color: u.$color-green;
+    border-radius: 50px;
+    box-shadow: 0 4px 5px rgba(u.$color-secondary-dark, 0.25); /* Мягкая тень под цвет фона */
     transition: box-shadow 0.3s;
 
     &:hover {
@@ -58,18 +60,20 @@
   &__content {
     display: flex;
     flex-direction: column;
+    gap: 10px;
     padding: 20px;
     text-align: center;
-    gap: 10px;
   }
 
   &__card-title {
     @include u.h4-style;
+
     color: u.$color-primary-light;
   }
 
   &__link {
     @include u.body-text;
+
     color: rgba(u.$color-primary-light, 0.5);
     transition: color 0.3s;
 

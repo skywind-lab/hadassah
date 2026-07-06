@@ -2,23 +2,17 @@
 
 .header {
   width: 100%;
-  padding: 50px 0 30px; /* Добавляем "воздуха" сверху и снизу */
+  padding: 30px 0; /* Добавляем "воздуха" сверху и снизу */
 
-  &__burger {
-    background-color: transparent;
-    border: none;
-    fill: u.$color-brand;
-
-    @media screen and (min-width: u.$bp-desktop) {
-      display: none;
-    }
+  @media screen and (min-width: u.$bp-desktop) {
+    padding: 50px 0 30px;
   }
 
   &__layout {
     display: flex;
+    gap: 1rem;
     align-items: center;
     justify-content: space-between; /* Элементы распределятся красиво и равномерно */
-    gap: 1rem;
 
     @media screen and (min-width: u.$bp-desktop) {
       gap: 2rem;
@@ -36,6 +30,7 @@
     @media screen and (min-width: u.$bp-desktop) {
       flex: 1;
       margin-left: 0;
+
       /* Главный секрет плавности — transition */
       transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
@@ -65,8 +60,8 @@
   }
 
   &__link {
-    color: u.$color-brand;
     font-size: 1.3rem;
+    color: u.$color-brand;
     transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -91,9 +86,9 @@
 
     @media screen and (min-width: u.$bp-desktop) {
       flex: 1.2;
-      text-align: center;
       justify-content: space-evenly;
       margin-right: 0;
+      text-align: center;
     }
   }
 
@@ -102,9 +97,9 @@
 
     @media screen and (min-width: u.$bp-desktop) {
       display: flex;
+      gap: 10px;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
       fill: u.$color-secondary-dark;
     }
   }

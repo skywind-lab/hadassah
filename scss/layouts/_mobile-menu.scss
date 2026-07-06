@@ -4,10 +4,10 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
   width: 100%;
   height: 100%;
   background-color: u.$color-yellow;
-  z-index: 100;
   transform: translateX(100%);
   transition: transform 0.3s;
 
@@ -19,5 +19,49 @@
     position: absolute;
     top: 16px;
     right: 24px;
+  }
+
+  &__block {
+    position: absolute; /* Вырываем из потока */
+    top: 7.5rem; /* Отступ от верхнего края страницы */
+    z-index: 10; /* Чтобы кнопка не спряталась под хедер */
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 35px;
+    background-color: rgba(u.$color-brand, 0.5);
+
+    @media screen and (min-width: u.$bp-desktop) {
+      display: none;
+    }
+
+    @media screen and (max-width: u.$bp-small) {
+      top: 6.5rem;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 2rem;
+    fill: #fff;
+
+    @media screen and (min-width: u.$bp-tablet) {
+      margin-left: 3rem;
+    }
+  }
+
+  &__btn {
+    margin-right: 2rem;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    fill: #fff;
+
+    @media screen and (min-width: u.$bp-tablet) {
+      margin-right: 3rem;
+    }
   }
 }
