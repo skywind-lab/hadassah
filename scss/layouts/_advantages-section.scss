@@ -3,7 +3,7 @@
 .advantages-section {
   display: flex;
   justify-content: space-between;
-  padding: 180px 0 100px;
+  padding: clamp(60px, 12vh, 180px) 0 clamp(40px, 12vh, 100px);
 
   &__title {
     color: u.$color-brand;
@@ -14,9 +14,23 @@
 
   &__list {
     display: flex;
+    flex-direction: column;
     gap: 30px;
     justify-content: space-between;
-    padding-top: 120px;
+    padding: 10%;
+
+    @media (width <= 1260px) and (min-width: u.$bp-desktop) {
+      gap: 10px;
+    }
+
+    @media screen and (min-width: u.$bp-tablet) {
+      padding: 20%;
+    }
+
+    @media screen and (min-width: u.$bp-desktop) {
+      flex-direction: row;
+      padding: 120px 0 0;
+    }
   }
 
   &__card {

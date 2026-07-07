@@ -12,16 +12,21 @@
   background-size: cover;
 
   &__button {
-    padding: 7px 50px;
+    padding: 7px 30px;
     margin: 0 auto;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: u.$color-secondary-dark;
     background-color: rgba(u.$color-primary-light, 0.8);
     box-shadow: 0 4px 5px rgba(u.$color-secondary-dark, 0.25); /* Мягкая тень под цвет фона */
+
+    @media screen and (min-width: u.$bp-tablet) {
+      padding: 7px 50px;
+      font-size: 1.7rem;
+    }
   }
 
   &__subtitle {
-    margin-top: 180px;
+    margin: clamp(60px, 12vh, 180px) 30px 20px;
 
     @include u.subtitle-style;
 
@@ -32,7 +37,7 @@
   &__title {
     @include u.h1-style;
 
-    margin-left: -4px;
+    margin-left: 26px;
     color: u.$color-primary-light;
     text-shadow: 0 4px 5px rgba(u.$color-secondary-dark, 0.8);
   }

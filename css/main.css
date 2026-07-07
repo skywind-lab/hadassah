@@ -57,7 +57,7 @@
 }
 .card-text {
   font-family: Inter, sans-serif;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   font-weight: 400;
   line-height: 1.5;
   color: rgba(131, 102, 91, 0.7);
@@ -482,18 +482,24 @@ select {
   background-size: cover;
 }
 .hero-section__button {
-  padding: 7px 50px;
+  padding: 7px 30px;
   margin: 0 auto;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   color: #83665b;
   background-color: rgba(250, 244, 234, 0.8);
   -webkit-box-shadow: 0 4px 5px rgba(131, 102, 91, 0.25);
           box-shadow: 0 4px 5px rgba(131, 102, 91, 0.25); /* Мягкая тень под цвет фона */
 }
+@media screen and (min-width: 768px) {
+  .hero-section__button {
+    padding: 7px 50px;
+    font-size: 1.7rem;
+  }
+}
 .hero-section__subtitle {
-  margin-top: 180px;
+  margin: clamp(60px, 12vh, 180px) 30px 20px;
   font-family: Inter, sans-serif;
-  font-size: 1.9rem;
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
   font-weight: 400;
   line-height: 1.5;
   color: #faf4ea;
@@ -501,10 +507,10 @@ select {
 }
 .hero-section__title {
   font-family: "Tiro Telugu", serif;
-  font-size: 10rem;
+  font-size: clamp(4rem, 15vw, 10rem); /* clamp(минимальный_размер, динамический_размер, максимальный_размер) */
   font-weight: 500;
   line-height: 1.2;
-  margin-left: -4px;
+  margin-left: 26px;
   color: #faf4ea;
   text-shadow: 0 4px 5px rgba(131, 102, 91, 0.8);
 }
@@ -516,13 +522,13 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 180px 0 100px;
+  padding: clamp(60px, 12vh, 180px) 0 clamp(40px, 12vh, 100px);
 }
 .advantages-section__title {
   color: #da8b80;
   text-align: center;
   font-family: Inter, sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.9rem, 5vw, 2.5rem);
   font-weight: 500;
   line-height: 1.2;
 }
@@ -530,11 +536,34 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 30px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 120px;
+  padding: 10%;
+}
+@media (width <= 1260px) and (min-width: 1024px) {
+  .advantages-section__list {
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .advantages-section__list {
+    padding: 20%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .advantages-section__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 120px 0 0;
+  }
 }
 .advantages-section__card {
   display: -webkit-box;
@@ -582,7 +611,7 @@ select {
 }
 .advantages-section__subtitle {
   font-family: Inter, sans-serif;
-  font-size: 1.4rem;
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
   font-weight: 500;
   line-height: 1.2;
   color: #83665b;
@@ -601,7 +630,7 @@ select {
   color: #da8b80;
   text-align: center;
   font-family: Inter, sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.9rem, 5vw, 2.5rem);
   font-weight: 500;
   line-height: 1.2;
 }
@@ -610,7 +639,7 @@ select {
   color: rgba(131, 102, 91, 0.8);
   text-align: center;
   font-family: Inter, sans-serif;
-  font-size: 1.4rem;
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
   font-weight: 500;
   line-height: 1.2;
 }
@@ -718,7 +747,7 @@ select {
   color: #da8b80;
   text-align: center;
   font-family: Inter, sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.9rem, 5vw, 2.5rem);
   font-weight: 500;
   line-height: 1.2;
 }
@@ -727,7 +756,7 @@ select {
   color: rgba(131, 102, 91, 0.8);
   text-align: center;
   font-family: Inter, sans-serif;
-  font-size: 1.4rem;
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
   font-weight: 500;
   line-height: 1.2;
 }
@@ -816,7 +845,7 @@ select {
 }
 .getoff-section__title {
   font-family: Inter, sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.9rem, 5vw, 2.5rem);
   font-weight: 500;
   line-height: 1.2;
   color: #ebe0e0;
@@ -1048,7 +1077,7 @@ select {
 }
 .footer__title {
   font-family: Inter, sans-serif;
-  font-size: 1.4rem;
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
   font-weight: 500;
   line-height: 1.2;
   color: #83665b;

@@ -1,14 +1,19 @@
 // Миксины для удобного обращения
 @mixin h1-style {
   font-family: "Tiro Telugu", serif;
-  font-size: 10rem;
+  font-size: clamp(
+    4rem,
+    15vw,
+    10rem
+  ); /* clamp(минимальный_размер, динамический_размер, максимальный_размер) */
+
   font-weight: 500;
   line-height: 1.2;
 }
 
 @mixin h2-style {
   font-family: Inter, sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.9rem, 5vw, 2.5rem);
   font-weight: 500;
   line-height: 1.2;
 }
@@ -29,14 +34,14 @@
 
 @mixin h5-style {
   font-family: Inter, sans-serif;
-  font-size: 1.4rem;
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
   font-weight: 500;
   line-height: 1.2;
 }
 
 @mixin subtitle-style {
   font-family: Inter, sans-serif;
-  font-size: 1.9rem;
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
   font-weight: 400;
   line-height: 1.5;
 }
@@ -57,7 +62,7 @@
 
 .card-text {
   font-family: Inter, sans-serif;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   font-weight: 400;
   line-height: 1.5;
   color: rgba(#83665b, 0.7);
