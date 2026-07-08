@@ -34,10 +34,6 @@
     @media screen and (min-width: u.$bp-desktop) {
       display: none;
     }
-
-    @media screen and (max-width: u.$bp-small) {
-      top: 6.5rem;
-    }
   }
 
   &__icons {
