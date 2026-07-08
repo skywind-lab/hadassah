@@ -5,6 +5,10 @@
   justify-content: space-between;
   padding: clamp(60px, 12vh, 180px) 0 clamp(40px, 12vh, 100px);
 
+  @media screen and (min-width: u.$bp-desktop) {
+    padding: 180px 0 100px;
+  }
+
   &__title {
     color: u.$color-brand;
     text-align: center;
@@ -24,7 +28,7 @@
     }
 
     @media screen and (min-width: u.$bp-tablet) {
-      padding: 20%;
+      padding: 5% 20%;
     }
 
     @media screen and (min-width: u.$bp-desktop) {

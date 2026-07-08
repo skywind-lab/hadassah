@@ -4,11 +4,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 100px 0;
+  padding: 40px 0;
+
+  @media screen and (min-width: u.$bp-desktop) {
+    padding: 100px 0;
+  }
 
   &__container {
-    margin-top: 100px;
+    margin-top: 50px;
     background-color: u.$color-yellow;
+
+    @media screen and (min-width: u.$bp-desktop) {
+      margin-top: 100px;
+    }
   }
 
   &__title {
@@ -19,7 +27,7 @@
   }
 
   &__subtitle {
-    margin-top: 20px;
+    margin: 20px 40px 0;
     color: rgba(u.$color-secondary-dark, 0.8);
     text-align: center;
 
@@ -27,27 +35,43 @@
   }
 
   &__grid {
-    display: grid;
+    display: flex;
+    flex-direction: column;
 
-    // Теперь 16 рядов
-    grid-template-rows: repeat(16, 1fr);
+    @media screen and (min-width: u.$bp-desktop) {
+      display: grid;
 
-    // Создаем 16 равных колонок, как на макете
-    grid-template-columns: repeat(16, 1fr);
+      // Теперь 16 рядов
+      grid-template-rows: repeat(16, 1fr);
 
-    // Задаем фиксированную ширину
-    height: 800px;
+      // Создаем 16 равных колонок, как на макете
+      grid-template-columns: repeat(16, 1fr);
+
+      // Задаем фиксированную ширину
+      height: 800px;
+    }
   }
 
   &__card {
     z-index: 3; // Самый верхний слой среди контента
     display: flex;
     flex-direction: column;
-    grid-row: 5 / 15;
-    grid-column: 3 / 8; // Занимает с 3 по 8 колонку
     justify-content: space-evenly;
     padding: 40px 60px;
     background: u.$color-brand-light;
+
+    @media screen and (min-width: u.$bp-desktop) and (width <= 1150px) {
+      padding: 40px;
+    }
+
+    @media screen and (width >= 1151px) {
+      padding: 40px 60px;
+    }
+
+    @media screen and (min-width: u.$bp-desktop) {
+      grid-row: 5 / 15;
+      grid-column: 3 / 8; // Занимает с 3 по 8 колонку
+    }
   }
 
   &__card-title {
@@ -60,6 +84,12 @@
 
   &__text {
     @include u.body-text;
+
+    margin-bottom: 20px;
+
+    @media screen and (min-width: u.$bp-desktop) {
+      margin-bottom: 0;
+    }
   }
 
   &__btn {
