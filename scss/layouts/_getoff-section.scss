@@ -2,9 +2,13 @@
 
 .getoff-section {
   justify-content: space-between;
-  padding: 80px 0;
+  padding: 40px 0;
   text-align: center;
   background-color: rgba(u.$color-secondary-dark, 0.6);
+
+  @media screen and (min-width: u.$bp-desktop) {
+    padding: 80px 0;
+  }
 
   &__container {
     display: flex;
@@ -15,19 +19,35 @@
   &__title {
     @include u.h2-style;
 
+    margin: 0 20px;
     color: u.$color-brand-light;
+  }
+
+  &__text {
+    margin: 0 20px;
   }
 
   &__buttons {
     display: flex;
-    gap: 100px;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
     justify-content: center;
+
+    @media screen and (min-width: u.$bp-tablet) {
+      flex-direction: row;
+      gap: 100px;
+    }
   }
 
   &__btn {
     padding: 7px 20px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     transition: box-shadow 0.3s;
+
+    @media screen and (min-width: u.$bp-tablet) {
+      font-size: 1.3rem;
+    }
 
     &:hover {
       box-shadow: 0 4px 6px rgba(u.$color-secondary-dark, 0.4);

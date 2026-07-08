@@ -2,11 +2,7 @@
 
 .header {
   width: 100%;
-  padding: 30px 0; /* Добавляем "воздуха" сверху и снизу */
-
-  @media screen and (min-width: u.$bp-desktop) {
-    padding: 50px 0 30px;
-  }
+  padding: 50px 0 30px; /* Добавляем "воздуха" сверху и снизу */
 
   &__layout {
     display: flex;
