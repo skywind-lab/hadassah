@@ -1030,8 +1030,8 @@ select {
   right: 24px;
 }
 .mobile-menu__block {
-  position: fixed; /* Вырываем из потока */
-  top: 0; /* Отступ от верхнего края страницы */
+  position: fixed;
+  top: 0;
   z-index: 10; /* Чтобы кнопка не спряталась под хедер */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1046,11 +1046,6 @@ select {
 @media screen and (min-width: 1024px) {
   .mobile-menu__block {
     display: none;
-  }
-}
-@media screen and (max-width: 400px) {
-  .mobile-menu__block {
-    top: 6.5rem;
   }
 }
 .mobile-menu__icons {
@@ -1173,8 +1168,14 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 10px;
-  padding-left: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #da8b80;
   font-family: Inter, sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.1rem);
@@ -1186,10 +1187,10 @@ select {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    padding-left: 60px;
   }
 }
 .footer__link {

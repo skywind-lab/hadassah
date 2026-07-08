@@ -22,8 +22,8 @@
   }
 
   &__block {
-    position: fixed; /* Вырываем из потока */
-    top: 0; /* Отступ от верхнего края страницы */
+    position: fixed;
+    top: 0;
     z-index: 10; /* Чтобы кнопка не спряталась под хедер */
     display: flex;
     align-items: flex-end;
