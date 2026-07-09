@@ -178,14 +178,15 @@
   background-color: #da8b80; /* Цвет кнопки */
   border: none;
   border-radius: 20px; /* Скругление кнопки */
-  -webkit-transition: -webkit-box-shadow 0.3s, -webkit-transform 0.1s ease;
-  transition: -webkit-box-shadow 0.3s, -webkit-transform 0.1s ease;
-  transition: box-shadow 0.3s, transform 0.1s ease;
-  transition: box-shadow 0.3s, transform 0.1s ease, -webkit-box-shadow 0.3s, -webkit-transform 0.1s ease;
+  fill: #fff;
   font-family: Inter, sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.1rem);
   font-weight: 400;
   line-height: 1.5;
+  -webkit-transition: -webkit-box-shadow 0.3s, -webkit-transform 0.1s ease;
+  transition: -webkit-box-shadow 0.3s, -webkit-transform 0.1s ease;
+  transition: box-shadow 0.3s, transform 0.1s ease;
+  transition: box-shadow 0.3s, transform 0.1s ease, -webkit-box-shadow 0.3s, -webkit-transform 0.1s ease;
   /* Эффекты при наведении и нажатии на кнопку */
 }
 .newsletter__btn:hover {
@@ -221,6 +222,29 @@
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+p,
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+address {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
 }
 
 html,
@@ -349,7 +373,7 @@ select {
       -ms-flex-pack: justify;
           justify-content: space-between; /* Элементы распределятся красиво и равномерно */
 }
-@media screen and (min-width: 1024px) {
+@media screen and (width >= 1040px) {
   .header__layout {
     gap: 2rem;
   }
@@ -429,6 +453,7 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
   margin-right: 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -464,6 +489,18 @@ select {
         -ms-flex-pack: justify;
             justify-content: space-between;
     fill: #83665b;
+  }
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 0;
+}
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 80px 0;
   }
 }
 
@@ -511,18 +548,9 @@ select {
 }
 
 .advantages-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: clamp(60px, 12vh, 180px) 0 clamp(40px, 12vh, 80px);
-}
-@media screen and (min-width: 1024px) {
-  .advantages-section {
-    padding: 180px 0 80px;
-  }
 }
 .advantages-section__title {
   color: #da8b80;
@@ -618,18 +646,9 @@ select {
 }
 
 .collections-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px 0;
-}
-@media screen and (min-width: 1024px) {
-  .collections-section {
-    padding: 100px 0;
-  }
 }
 .collections-section__title {
   color: #da8b80;
@@ -767,9 +786,6 @@ select {
 }
 
 .story-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -777,7 +793,6 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px 0;
 }
 .story-section__container {
   margin-top: 50px;
@@ -1012,7 +1027,7 @@ select {
   z-index: 100;
   width: 100%;
   height: 100%;
-  background-color: #f1d3b9;
+  background-color: #ebe0e0;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition: -webkit-transform 0.3s;
@@ -1047,6 +1062,21 @@ select {
   .mobile-menu__block {
     display: none;
   }
+}
+.mobile-menu__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 7rem;
+  color: #83665b;
 }
 .mobile-menu__icons {
   display: -webkit-box;
@@ -1092,7 +1122,7 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 40px;
+  gap: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1104,6 +1134,7 @@ select {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 40px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
@@ -1190,7 +1221,7 @@ select {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
-    padding-left: 60px;
+    text-indent: 40px; /* Сдвинет первую строку текста вправо на 40 пикселей */
   }
 }
 .footer__link {
@@ -1214,6 +1245,27 @@ select {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  font-style: normal;
+}
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .footer__list {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
 }
 .footer__right {
   display: -webkit-box;

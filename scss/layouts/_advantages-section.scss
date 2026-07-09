@@ -1,13 +1,7 @@
 @use "../utils/index" as u;
 
 .advantages-section {
-  display: flex;
   justify-content: space-between;
-  padding: clamp(60px, 12vh, 180px) 0 clamp(40px, 12vh, 80px);
-
-  @media screen and (min-width: u.$bp-desktop) {
-    padding: 180px 0 80px;
-  }
 
   &__title {
     color: u.$color-brand;

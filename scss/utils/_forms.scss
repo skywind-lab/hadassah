@@ -52,11 +52,13 @@
     background-color: u.$color-brand; /* Цвет кнопки */
     border: none;
     border-radius: 20px; /* Скругление кнопки */
+    fill: #fff;
+
+    @include u.body-text;
+
     transition:
       box-shadow 0.3s,
       transform 0.1s ease;
-
-    @include u.body-text;
 
     /* Эффекты при наведении и нажатии на кнопку */
     &:hover {

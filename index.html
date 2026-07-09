@@ -79,6 +79,16 @@
     </div>
 
     <div class="mobile-menu">
+      <nav class="header__nav">
+        <ul class="mobile-menu__menu">
+          <li><a class="mobile-menu__link" href="#">Home</a></li>
+          <li><a class="mobile-menu__link" href="#">About</a></li>
+          <li><a class="mobile-menu__link" href="#">Skincare</a></li>
+          <li><a class="mobile-menu__link" href="#">Makeup</a></li>
+          <li><a class="mobile-menu__link" href="#">Fragrances</a></li>
+          <li><a class="mobile-menu__link" href="#">Contact</a></li>
+        </ul>
+      </nav>
       <button class="mobile-menu__btn-close menu-btn-close" type="button">
         Close
       </button>
@@ -101,7 +111,7 @@
 
       <!-- Why Hadassah? -->
 
-      <section class="advantages-section">
+      <section class="section advantages-section">
         <div class="container">
           <h2 class="advantages-section__title">Why Hadassah?</h2>
 
@@ -153,7 +163,7 @@
 
       <!-- Our Collections -->
 
-      <section class="collections-section">
+      <section class="section collections-section">
         <div class="container">
           <h2 class="collections-section__title">Our Collections</h2>
           <h5 class="collections-section__subtitle">
@@ -235,7 +245,7 @@
 
       <!-- Our Story -->
 
-      <section class="story-section">
+      <section class="section story-section">
         <h2 class="story-section__title">Our Story</h2>
         <h5 class="story-section__subtitle">
           Discover a world of endless possibilities to create the perfect look
@@ -319,7 +329,7 @@
             Exclusive premium cosmetics <br />for daily care and luxury
           </p>
 
-          <div class="footer__social">
+          <address class="footer__social">
             <a href="#" class="icon">
               <svg width="20" height="20">
                 <use href="./images/icons.svg#icon-insta"></use>
@@ -335,7 +345,7 @@
                 <use href="./images/icons.svg#icon-youtube"></use>
               </svg>
             </a>
-          </div>
+          </address>
         </div>
 
         <ul class="footer__menu">
@@ -348,11 +358,23 @@
         </ul>
 
         <!-- телефон, адрес и имэйл, как их вставлять есть в уроке 3 -->
-        <div class="footer__contacts">
-          <p>telephone</p>
-          <p>address</p>
-          <p>e-mail</p>
-        </div>
+        <address class="footer__contacts footer__slogan">
+          <ul class="footer__list">
+            <li>
+              <a href="tel:+48786474864">+48 786 474 864</a>
+            </li>
+            <li>
+              <a href="mailto:vladaskywind@gmail.com">vladaskywind@gmail.com</a>
+            </li>
+            <li>
+              <a
+                href="https://maps.app.goo.gl/2wZDGJeY12t9BAVz7"
+                target="_blank"
+                >Al. Jerozolimskie 50, 00-001 Warszawa</a
+              >
+            </li>
+          </ul>
+        </address>
 
         <div class="footer__right">
           <h5 class="footer__title">Newsletter</h5>
@@ -368,7 +390,9 @@
                 class="newsletter__input"
               />
               <button type="submit" class="newsletter__btn" aria-label="Send">
-                <span class="newsletter__arrow">→</span>
+                <svg width="16" height="16">
+                  <use href="./images/icons.svg#icon-Arrow-1"></use>
+                </svg>
               </button>
             </form>
           </div>

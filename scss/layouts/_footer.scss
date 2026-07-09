@@ -7,12 +7,13 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
     padding: 80px 0;
 
     @media screen and (min-width: u.$bp-desktop) {
       flex-direction: row;
+      gap: 40px;
       align-items: start;
     }
   }
@@ -69,7 +70,7 @@
     @media screen and (min-width: u.$bp-desktop) {
       flex: 1;
       align-items: start;
-      padding-left: 60px;
+      text-indent: 40px; /* Сдвинет первую строку текста вправо на 40 пикселей */
     }
   }
 
@@ -90,6 +91,18 @@
 
   &__contacts {
     flex: 1;
+    font-style: normal;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    @media screen and (min-width: u.$bp-desktop) {
+      align-items: start;
+    }
   }
 
   &__right {

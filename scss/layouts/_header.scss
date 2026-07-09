@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: space-between; /* Элементы распределятся красиво и равномерно */
 
-    @media screen and (min-width: u.$bp-desktop) {
+    @media screen and (width >= 1040px) {
       gap: 2rem;
     }
   }
@@ -74,6 +74,7 @@
 
   &__right {
     display: flex;
+    gap: 10px;
     margin-right: 1rem;
 
     @media screen and (min-width: u.$bp-tablet) {

@@ -5,6 +5,25 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  user-select: none;
+
+  // 1. Отключает ТУ САМУЮ синюю вспышку при клике (баг эмуляции тапа):
+  -webkit-tap-highlight-color: transparent;
+}
+
+p,
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+address {
+  user-select: text;
 }
 
 // 2. Полный сброс внешних отступов (margins) для всех основных элементов.
