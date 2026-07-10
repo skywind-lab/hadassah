@@ -19,6 +19,9 @@
     position: absolute;
     top: 16px;
     right: 24px;
+    background-color: transparent;
+    border: none;
+    fill: u.$color-secondary-dark;
   }
 
   &__block {
@@ -43,6 +46,21 @@
     align-items: center;
     padding-top: 7rem;
     color: u.$color-secondary-dark;
+  }
+
+  &__link {
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+      transform: translateY(-2px); /* Просто смещаем вверх */
+    }
+
+    &:active {
+      transform: translateY(1px); /* При клике слегка вдавливается */
+    }
   }
 
   &__icons {

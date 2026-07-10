@@ -1043,6 +1043,9 @@ select {
   position: absolute;
   top: 16px;
   right: 24px;
+  background-color: transparent;
+  border: none;
+  fill: #83665b;
 }
 .mobile-menu__block {
   position: fixed;
@@ -1077,6 +1080,23 @@ select {
           align-items: center;
   padding-top: 7rem;
   color: #83665b;
+}
+.mobile-menu__link {
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), -webkit-transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+.mobile-menu__link:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px); /* Просто смещаем вверх */
+}
+.mobile-menu__link:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px); /* При клике слегка вдавливается */
 }
 .mobile-menu__icons {
   display: -webkit-box;
