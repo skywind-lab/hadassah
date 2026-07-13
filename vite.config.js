@@ -3,6 +3,7 @@ import injectHTML from "vite-plugin-html-inject";
 import { resolve } from "path";
 
 export default defineConfig({
+  base: "/hadassah/", // <-- ОБЯЗАТЕЛЬНО ДОБАВЬ ЭТУ СТРОКУ!
   plugins: [
     injectHTML(), // Этот плагин отвечает за склейку HTML
   ],
