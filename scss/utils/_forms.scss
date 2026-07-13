@@ -9,9 +9,13 @@
   /* Сама форма */
   &__form {
     display: flex;
-    gap: 16px; /* Расстояние между инпутом и кнопкой */
+    gap: 8px; /* Расстояние между инпутом и кнопкой */
     align-items: center;
     width: 100%;
+
+    @media screen and (min-width: u.$bp-desktop) {
+      gap: 16px;
+    }
   }
 
   /* Поле ввода (E-mail) */

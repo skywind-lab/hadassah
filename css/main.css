@@ -97,11 +97,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px; /* Расстояние между инпутом и кнопкой */
+  gap: 8px; /* Расстояние между инпутом и кнопкой */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .newsletter__form {
+    gap: 16px;
+  }
 }
 .newsletter {
   /* Поле ввода (E-mail) */
@@ -551,6 +556,12 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .advantages-section {
+    margin-top: 60px;
+  }
 }
 .advantages-section__title {
   color: #da8b80;
@@ -679,11 +690,11 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 60px 10%;
+  padding: 60px 10% 0;
 }
 @media screen and (min-width: 768px) {
   .collections-section__list {
-    padding: 60px 20%;
+    padding: 60px 20% 0;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -692,7 +703,7 @@ select {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 120px 0;
+    padding: 120px 0 0;
   }
 }
 @media (width <= 1260px) and (min-width: 1024px) {

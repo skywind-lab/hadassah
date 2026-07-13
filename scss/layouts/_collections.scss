@@ -23,15 +23,15 @@
     flex-direction: column;
     gap: 20px;
     justify-content: space-between;
-    padding: 60px 10%;
+    padding: 60px 10% 0;
 
     @media screen and (min-width: u.$bp-tablet) {
-      padding: 60px 20%;
+      padding: 60px 20% 0;
     }
 
     @media screen and (min-width: u.$bp-desktop) {
       flex-direction: row;
-      padding: 120px 0;
+      padding: 120px 0 0;
     }
 
     @media (width <= 1260px) and (min-width: u.$bp-desktop) {
