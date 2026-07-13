@@ -4,8 +4,8 @@
   min-height: 85vh;
   padding-top: 30px;
   background-image: image-set(
-    url("../images/hero-image.webp") type("image/webp"),
-    url("../images/hero-image.jpg") type("image/jpeg")
+    url("/images/hero-image.webp") type("image/webp"),
+    url("/images/hero-image.jpg") type("image/jpeg")
   );
   background-repeat: no-repeat;
   background-position: center;

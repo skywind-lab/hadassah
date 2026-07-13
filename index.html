@@ -5,51 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- Styles -->
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./scss/main.scss" />
   </head>
   <body>
-    <header class="header">
-      <div class="container header__layout">
-        <div class="header__logo">
-          <a href="./index.html">
-            <img src="./images/logo.svg" alt="Logo Hadassah" />
-          </a>
-        </div>
-
-        <nav class="header__nav">
-          <ul class="header__menu">
-            <li><a class="header__link" href="#">Home</a></li>
-            <li><a class="header__link" href="#">About</a></li>
-            <li><a class="header__link" href="#">Skincare</a></li>
-            <li><a class="header__link" href="#">Makeup</a></li>
-            <li><a class="header__link" href="#">Fragrances</a></li>
-            <li><a class="header__link" href="#">Contact</a></li>
-          </ul>
-        </nav>
-
-        <div class="header__right">
-          <button class="button pink-btn" type="button">Shop Now</button>
-
-          <div class="header__icons">
-            <a href="#" class="icon">
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-search"></use>
-              </svg>
-            </a>
-            <a href="#" class="icon">
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-account"></use>
-              </svg>
-            </a>
-            <a href="#" class="icon">
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-buy"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
+    <!-- Heder -->
+    <load src="./partials/header.html" />
 
     <!-- Burger -->
     <div class="mobile-menu__block">
@@ -320,89 +280,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer__container">
-        <div class="footer__left">
-          <a href="./index.html" class="footer__logo">
-            <img src="./images/logo.svg" alt="Logo Hadassah" />
-          </a>
-
-          <p class="footer__slogan">
-            Exclusive premium cosmetics <br />for daily care and luxury
-          </p>
-
-          <address class="footer__social">
-            <a href="#" class="icon">
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-insta"></use>
-              </svg>
-            </a>
-            <a href="#" class="icon">
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-facebook"></use>
-              </svg>
-            </a>
-            <a href="#" class="icon">
-              <svg width="20" height="20">
-                <use href="./images/icons.svg#icon-youtube"></use>
-              </svg>
-            </a>
-          </address>
-        </div>
-
-        <ul class="footer__menu">
-          <li a class="footer__link"><a href="#">Home</a></li>
-          <li a class="footer__link"><a href="#">About</a></li>
-          <li a class="footer__link"><a href="#">Skincare</a></li>
-          <li a class="footer__link"><a href="#">Makeup</a></li>
-          <li a class="footer__link"><a href="#">Fragrances</a></li>
-          <li a class="footer__link"><a href="#">Contact</a></li>
-        </ul>
-
-        <!-- телефон, адрес и имэйл, как их вставлять есть в уроке 3 -->
-        <address class="footer__contacts footer__slogan">
-          <ul class="footer__list">
-            <li>
-              <a href="tel:+48786474864">+48 786 474 864</a>
-            </li>
-            <li>
-              <a href="mailto:vladaskywind@gmail.com">vladaskywind@gmail.com</a>
-            </li>
-            <li>
-              <a
-                href="https://maps.app.goo.gl/2wZDGJeY12t9BAVz7"
-                target="_blank"
-                >Al. Jerozolimskie 50, 00-001 Warszawa</a
-              >
-            </li>
-          </ul>
-        </address>
-
-        <div class="footer__right">
-          <h5 class="footer__title">Newsletter</h5>
-          <p class="footer__slogan">Get exclusive offers and beauty tips</p>
-
-          <!-- subscribe field + arow button -->
-          <div class="newsletter">
-            <form class="newsletter__form">
-              <input
-                type="email"
-                placeholder="E-mail"
-                required
-                class="newsletter__input"
-              />
-              <button type="submit" class="newsletter__btn" aria-label="Send">
-                <svg width="16" height="16">
-                  <use href="./images/icons.svg#icon-Arrow-1"></use>
-                </svg>
-              </button>
-            </form>
-          </div>
-          <a class="footer__privacy" href="#">Privacy policy</a>
-        </div>
-      </div>
-      <p class="footer__rights">© 2026 Hadassah. All rights reserved.</p>
-    </footer>
+    <load src="./partials/footer.html" />
 
     <script src="./js/mobile-menu.js"></script>
   </body>
