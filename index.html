@@ -3,281 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home</title>
     <!-- Styles -->
     <link rel="stylesheet" href="./scss/main.scss" />
   </head>
   <body>
-    пни гитхаб
     <!-- Heder -->
     <load src="./partials/header.html" />
 
     <!-- Burger -->
-    <div class="mobile-menu__block">
-      <div class="mobile-menu__icons">
-        <a href="#" class="icon">
-          <svg width="20" height="20">
-            <use href="./images/icons.svg#icon-search"></use>
-          </svg>
-        </a>
-        <a href="#" class="icon">
-          <svg width="20" height="20">
-            <use href="./images/icons.svg#icon-account"></use>
-          </svg>
-        </a>
-        <a href="#" class="icon">
-          <svg width="20" height="20">
-            <use href="./images/icons.svg#icon-buy"></use>
-          </svg>
-        </a>
-      </div>
-
-      <button class="mobile-menu__btn menu-btn-open" type="button">
-        <svg width="20" height="20">
-          <use href="./images/icons.svg#icon-menu-1"></use>
-        </svg>
-      </button>
-    </div>
-
-    <div class="mobile-menu">
-      <nav class="header__nav">
-        <ul class="mobile-menu__menu">
-          <li><a class="mobile-menu__link" href="#">Home</a></li>
-          <li><a class="mobile-menu__link" href="#">About</a></li>
-          <li><a class="mobile-menu__link" href="#">Skincare</a></li>
-          <li><a class="mobile-menu__link" href="#">Makeup</a></li>
-          <li><a class="mobile-menu__link" href="#">Fragrances</a></li>
-          <li><a class="mobile-menu__link" href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="mobile-menu__btn-close menu-btn-close" type="button">
-        <svg width="20" height="20">
-          <use href="./images/icons.svg#icon-cross"></use>
-        </svg>
-      </button>
-    </div>
+    <load src="./partials/mobile-menu.html" />
 
     <main>
       <!-- Hadassah -->
-
-      <section class="hero-section">
-        <div class="container">
-          <button class="button hero-section__button">
-            New collection 2026
-          </button>
-          <p class="hero-section__subtitle">
-            Exclusive premium cosmetics for daily care and luxury
-          </p>
-          <h1 class="hero-section__title">Hadassah</h1>
-        </div>
-      </section>
+      <load src="./partials/hero-section.html" />
 
       <!-- Why Hadassah? -->
-
-      <section class="section advantages-section">
-        <div class="container">
-          <h2 class="advantages-section__title">Why Hadassah?</h2>
-
-          <div class="advantages-section__list">
-            <article class="advantages-section__card">
-              <div class="advantages-section__icon">
-                <svg width="35" height="35">
-                  <use href="./images/icons.svg#icon-leave"></use>
-                </svg>
-              </div>
-              <h5 class="advantages-section__subtitle">Natural Ingredients</h5>
-              <p class="card-text">
-                Only organic components of the highest quality
-              </p>
-            </article>
-
-            <article class="advantages-section__card">
-              <div class="advantages-section__icon">
-                <svg width="35" height="35">
-                  <use href="./images/icons.svg#icon-star"></use>
-                </svg>
-              </div>
-              <h5 class="advantages-section__subtitle">Innovative Formulas</h5>
-              <p class="card-text">Advanced skincare technology</p>
-            </article>
-
-            <article class="advantages-section__card">
-              <div class="advantages-section__icon">
-                <svg width="35" height="35">
-                  <use href="./images/icons.svg#icon-heart"></use>
-                </svg>
-              </div>
-              <h5 class="advantages-section__subtitle">Cruelty-Free</h5>
-              <p class="card-text">Never tested on animals</p>
-            </article>
-
-            <article class="advantages-section__card">
-              <div class="advantages-section__icon">
-                <svg width="35" height="35">
-                  <use href="./images/icons.svg#icon-prise"></use>
-                </svg>
-              </div>
-              <h5 class="advantages-section__subtitle">Premium Quality</h5>
-              <p class="card-text">Certified luxury cosmetics</p>
-            </article>
-          </div>
-        </div>
-      </section>
+      <load src="./partials/advantages-section.html" />
 
       <!-- Our Collections -->
-
-      <section class="section collections-section">
-        <div class="container">
-          <h2 class="collections-section__title">Our Collections</h2>
-          <h5 class="collections-section__subtitle">
-            Choose the perfect solution for your beauty
-          </h5>
-
-          <div class="collections-section__list">
-            <!-- 1 card -->
-            <article class="collections-section__card">
-              <div class="collections-section__image-wrap">
-                <picture>
-                  <source
-                    srcset="./images/collections1.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./images/collections1.jpg"
-                    alt="Skincare set"
-                    class="collections-section__image"
-                  />
-                </picture>
-              </div>
-
-              <div class="collections-section__content">
-                <h4 class="collections-section__card-title">Scincare</h4>
-                <p class="card-text-white">Complete solutions for your skin</p>
-                <a href="#" class="collections-section__link">Learn more</a>
-              </div>
-            </article>
-
-            <!-- 2 card -->
-            <article class="collections-section__card">
-              <div class="collections-section__image-wrap">
-                <picture>
-                  <source
-                    srcset="./images/collections2.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./images/collections2.jpg"
-                    alt="Skincare set"
-                    class="collections-section__image"
-                  />
-                </picture>
-              </div>
-
-              <div class="collections-section__content">
-                <h4 class="collections-section__card-title">Makeup</h4>
-                <p class="card-text-white">Enhance your natural beauty</p>
-                <a href="#" class="collections-section__link">Learn more</a>
-              </div>
-            </article>
-
-            <!-- 3 card -->
-            <article class="collections-section__card">
-              <div class="collections-section__image-wrap">
-                <picture>
-                  <source
-                    srcset="./images/collections3.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="./images/collections3.jpg"
-                    alt="Skincare set"
-                    class="collections-section__image"
-                  />
-                </picture>
-              </div>
-
-              <div class="collections-section__content">
-                <h4 class="collections-section__card-title">Fragrances</h4>
-                <p class="card-text-white">Exclusive scents for you</p>
-                <a href="#" class="collections-section__link">Learn more</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+      <load src="./partials/collections-section.html" />
 
       <!-- Our Story -->
-
-      <section class="section story-section">
-        <h2 class="story-section__title">Our Story</h2>
-        <h5 class="story-section__subtitle">
-          Discover a world of endless possibilities to create the perfect look
-        </h5>
-
-        <div class="story-section__container">
-          <div class="story-section__grid">
-            <div class="story-section__card">
-              <h3 class="story-section__card-title">Meet Hadassah</h3>
-              <p class="story-section__text">
-                We create cosmetics that reveal the natural beauty of every
-                woman. Our products combine the power of nature with the
-                innovation of science. Since 2018, we have been helping
-                thousands of women across Europe feel confident and radiate from
-                within.
-              </p>
-              <button class="button pink-btn story-section__btn">
-                Read More
-              </button>
-            </div>
-
-            <div class="story-section__image-main">
-              <picture>
-                <source srcset="./images/story1.webp" type="image/webp" />
-                <img
-                  src="./images/story1.jpg"
-                  alt="Cosmetic cream in the mountains"
-                />
-              </picture>
-            </div>
-
-            <div class="story-section__image-overlay">
-              <picture>
-                <source srcset="./images/story2.webp" type="image/webp" />
-                <img
-                  src="./images/story2.jpg"
-                  alt="Cosmetics on grass near waterfall"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>
-      </section>
+      <load src="./partials/story-section.html" />
 
       <!-- Get 15% off -->
-
-      <section class="getoff-section">
-        <div class="container getoff-section__container">
-          <h2 class="getoff-section__title">Get 15% off your first order</h2>
-          <p class="card-text-white getoff-section__text">
-            Subscribe to our newsletter and be the first to know about new
-            products and special offers
-          </p>
-          <div class="getoff-section__buttons">
-            <button
-              class="button getoff-section__btn getoff-section__btn--mail"
-              type="input"
-            >
-              Enter your e-mail
-            </button>
-            <button
-              class="button getoff-section__btn getoff-section__btn--subscribe"
-              type="submit"
-            >
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
+      <load src="./partials/getoff-section.html" />
     </main>
 
     <!-- Footer -->
