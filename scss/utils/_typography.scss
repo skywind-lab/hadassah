@@ -3,7 +3,7 @@
   font-family: "Tiro Telugu", serif;
   font-size: clamp(
     4rem,
-    15vw,
+    2.29rem + 8.57vw,
     10rem
   ); /* clamp(минимальный_размер, динамический_размер, максимальный_размер) */
 
@@ -13,42 +13,42 @@
 
 @mixin h2-style {
   font-family: Inter, sans-serif;
-  font-size: clamp(1.9rem, 5vw, 2.5rem);
+  font-size: clamp(1.9rem, 1.73rem + 0.86vw, 2.5rem);
   font-weight: 500;
   line-height: 1.2;
 }
 
 @mixin h3-style {
   font-family: Inter, sans-serif;
-  font-size: clamp(1.4rem, 4.5vw, 2rem);
+  font-size: clamp(1.4rem, 1.23rem + 0.86vw, 2rem);
   font-weight: 500;
   line-height: 1.2;
 }
 
 @mixin h4-style {
   font-family: Inter, sans-serif;
-  font-size: clamp(1.4rem, 3.5vw, 1.7rem);
+  font-size: clamp(1.4rem, 1.31rem + 0.43vw, 1.7rem);
   font-weight: 500;
   line-height: 1.2;
 }
 
 @mixin h5-style {
   font-family: Inter, sans-serif;
-  font-size: clamp(1.15rem, 3vw, 1.4rem);
+  font-size: clamp(1.15rem, 1.08rem + 0.36vw, 1.4rem);
   font-weight: 500;
   line-height: 1.2;
 }
 
 @mixin subtitle-style {
   font-family: Inter, sans-serif;
-  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  font-size: clamp(1.4rem, 1.26rem + 0.71vw, 1.9rem);
   font-weight: 400;
   line-height: 1.5;
 }
 
 @mixin body-text {
   font-family: Inter, sans-serif;
-  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-size: clamp(1rem, 0.97rem + 0.14vw, 1.1rem);
   font-weight: 400;
   line-height: 1.5;
 }
@@ -62,7 +62,7 @@
 
 .card-text {
   font-family: Inter, sans-serif;
-  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-size: clamp(1rem, 0.97rem + 0.14vw, 1.1rem);
   font-weight: 400;
   line-height: 1.5;
   color: rgba(#83665b, 0.7);
@@ -70,8 +70,53 @@
 
 .card-text-white {
   font-family: Inter, sans-serif;
-  font-size: clamp(1.1rem, 2vw, 1.2rem);
+  font-size: clamp(1.1rem, 1.07rem + 0.14vw, 1.2rem);
   font-weight: 400;
   line-height: 1.5;
-  color: #ebe0e0;
+  color: #fff;
+}
+
+.pages-hero-title {
+  font-family: "Tiro Telugu", serif;
+  font-size: clamp(2.5rem, 1.79rem + 3.57vw, 5rem);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #83665b;
+  text-align: center;
+}
+
+.pages-hero-subtitle {
+  font-family: Inter, sans-serif;
+  font-size: clamp(1.4rem, 1.31rem + 0.43vw, 1.7rem);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #83665b;
+  text-align: center;
+}
+
+.section-title {
+  font-family: Inter, sans-serif;
+  font-size: clamp(1.9rem, 1.73rem + 0.86vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #da8b80;
+  text-align: center;
+}
+
+.section-subtitle {
+  margin-top: 20px;
+  font-family: Inter, sans-serif;
+  font-size: clamp(1.15rem, 1.08rem + 0.36vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.2;
+  color: rgba(#83665b, 0.8);
+  text-align: center;
+}
+
+.body-text {
+  font-family: Inter, sans-serif;
+  font-size: clamp(1rem, 0.97rem + 0.14vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: #252424;
 }

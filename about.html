@@ -15,49 +15,119 @@
     <load src="./partials/mobile-menu.html" />
     <main>
       <!-- Hero -->
-      <section>
-        <h1>Our Story</h1>
-        <h3>
+      <section class="section about-hero-section">
+        <h1 class="pages-hero-title">Our Story</h1>
+        <h3 class="pages-hero-subtitle">
           HADASSAH is not just a cosmetic brand. It's a philosophy of beauty
           that starts from within.
         </h3>
-      </section>
-
-      <!-- Our Story -->
-      <section>
-        <div>
-          <h2>Our Mission</h2>
-          <p>
-            We believe that true beauty is when you feel comfortable in your own
-            skin. That's why we create products that don't mask, but reveal your
-            natural beauty. Every ingredient is carefully selected and undergoes
-            strict quality control. We use only natural components that have
-            proven their effectiveness and safety. Our team consists of
-            professionals with years of experience in dermatology, cosmetology,
-            and chemistry. Together we create formulas that truly work.
-          </p>
+        <div class="container about-hero-section__container">
+          <div class="about-hero-section__content">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="body-text">
+              We believe that true beauty is when you feel comfortable in your
+              own skin. That's why we create products that don't mask, but
+              reveal your natural beauty. Every ingredient is carefully selected
+              and undergoes strict quality control. We use only natural
+              components that have proven their effectiveness and safety. Our
+              team consists of professionals with years of experience in
+              dermatology, cosmetology, and chemistry. Together we create
+              formulas that truly work.
+            </p>
+          </div>
+          <div class="about-hero-section__image-wrapper">
+            <picture class="about-hero-section__image">
+              <source
+                srcset="./images/about_girl with a cream.webp"
+                type="image/webp"
+                alt="A girl applies cream to her face"
+              />
+              <img
+                src="./images/about_girl with a cream.jpg"
+                alt="Cosmetic cream in the mountains"
+              />
+            </picture>
+          </div>
         </div>
-        <img src="#" alt="A girl applies cream to her face" />
       </section>
 
       <!-- Our Values -->
-      <section>
+      <section class="section">
         <div class="container">
-          <h2>Our Values</h2>
-          <h5>Principles that guide us</h5>
-          <div class="advantages-section__list">
-            <article>
-              <div class="advantages-section__icon">
+          <h2 class="section-title">Our Values</h2>
+          <h5 class="section-subtitle">Principles that guide us</h5>
+
+          <div class="four-cards">
+            <article class="four-cards__card">
+              <div class="four-cards__icon">
                 <svg width="35" height="35">
                   <use href="./images/icons.svg#icon-leave"></use>
                 </svg>
               </div>
-              <h5 class="advantages-section__subtitle">Sustainability</h5>
+              <h5 class="four-cards__subtitle">Sustainability</h5>
               <p class="card-text">
                 We care for the planet, using only sustainable and eco-friendly
                 ingredients.
               </p>
             </article>
+            <article class="four-cards__card">
+              <div class="four-cards__icon">
+                <svg width="35" height="35">
+                  <use href="./images/icons.svg#icon-heart"></use>
+                </svg>
+              </div>
+              <h5 class="four-cards__subtitle">Honesty</h5>
+              <p class="card-text">
+                Complete transparency in composition and production of every
+                product.
+              </p>
+            </article>
+            <article class="four-cards__card">
+              <div class="four-cards__icon">
+                <svg width="35" height="35">
+                  <use href="./images/icons.svg#icon-star"></use>
+                </svg>
+              </div>
+              <h5 class="four-cards__subtitle">Quality</h5>
+              <p class="card-text">
+                Only premium components and strict control at every stage.
+              </p>
+            </article>
+            <article class="four-cards__card">
+              <div class="four-cards__icon">
+                <svg width="35" height="35">
+                  <use href="./images/icons.svg#icon-people"></use>
+                </svg>
+              </div>
+              <h5 class="four-cards__subtitle">Care</h5>
+              <p class="card-text">
+                We create products that truly work for you.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Join -->
+      <section class="section about-join-section">
+        <div class="container getoff-section__container">
+          <h2 class="getoff-section__title">Join our community</h2>
+          <p class="card-text-white getoff-section__text">
+            More than 100,000 women across Europe already trust LUMIÈRE. Become
+            part of our story.
+          </p>
+          <div class="getoff-section__buttons">
+            <button
+              class="button getoff-section__btn about-join-section__btn"
+              type="button"
+            >
+              Shop Collection
+            </button>
+            <button
+              class="button getoff-section__btn getoff-section__btn--subscribe"
+              type="submit"
+            >
+              Subscribe
+            </button>
           </div>
         </div>
       </section>

@@ -17,6 +17,7 @@
 // 4. Компоненты
 @use "components/buttons";
 @use "components/links";
+@use "components/four-cards-one";
 
 // 5. Секции сайта
 @use "layouts/header";
@@ -29,3 +30,6 @@
 @use "layouts/mobile-menu";
 @use "layouts/modal";
 @use "layouts/footer";
+
+// 6. Страницы
+@use "./pages/about";

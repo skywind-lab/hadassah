@@ -3,21 +3,6 @@
 .collections-section {
   justify-content: space-between;
 
-  &__title {
-    color: u.$color-brand;
-    text-align: center;
-
-    @include u.h2-style;
-  }
-
-  &__subtitle {
-    margin-top: 20px;
-    color: rgba(u.$color-secondary-dark, 0.8);
-    text-align: center;
-
-    @include u.h5-style;
-  }
-
   &__list {
     display: flex;
     flex-direction: column;
