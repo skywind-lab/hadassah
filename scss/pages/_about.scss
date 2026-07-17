@@ -11,6 +11,14 @@
     #fff
   ); /* Основной градиент */
 
+  &__title {
+    margin-top: 40px;
+
+    @media screen and (min-width: u.$bp-desktop) {
+      margin-top: 60px;
+    }
+  }
+
   &__container {
     display: grid;
     grid-template-columns: 1fr; /* В один столбик */
