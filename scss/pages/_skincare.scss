@@ -1,0 +1,70 @@
+@use "../utils/index" as u;
+
+.programs-section {
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    display: flex;
+  }
+}
+
+.programs-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 50px;
+  box-shadow: 0 4px 4px rgba(#000, 0.2);
+
+  &__heder {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 2rem;
+    color: #fff;
+    background-color: u.$color-yellow;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(#fff, 0.3);
+    border-radius: 50%;
+    fill: #fff;
+  }
+
+  &__title {
+    @include u.h3-style;
+  }
+
+  &__list {
+    padding: 2rem;
+    counter-reset: custom-counter; /* Для кастомной нумерации */
+  }
+
+  &__item {
+    counter-increment: custom-counter;
+  }
+
+  /* Кастомный круг с цифрой */
+  &__item::before {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin-right: 14px;
+
+    // font-size: 0.85rem;
+    // font-weight: 600;
+    color: #7d726d;
+    content: counter(custom-counter) ".";
+    background-color: #f1e4dc; /* Фоновый цвет кружков с цифрами */
+    border-radius: 50%;
+  }
+}
