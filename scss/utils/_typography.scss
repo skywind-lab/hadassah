@@ -60,20 +60,11 @@
   line-height: 1.5;
 }
 
-.card-text {
+@mixin micro-text {
   font-family: Inter, sans-serif;
-  font-size: clamp(1rem, 0.97rem + 0.14vw, 1.1rem);
+  font-size: clamp(0.625rem, 0.58rem + 0.23vw, 0.75rem);
   font-weight: 400;
   line-height: 1.5;
-  color: rgba(#83665b, 0.7);
-}
-
-.card-text-white {
-  font-family: Inter, sans-serif;
-  font-size: clamp(1.1rem, 1.07rem + 0.14vw, 1.2rem);
-  font-weight: 400;
-  line-height: 1.5;
-  color: #fff;
 }
 
 .pages-hero-title {
@@ -120,4 +111,36 @@
   font-weight: 400;
   line-height: 1.5;
   color: #252424;
+}
+
+.card-title {
+  font-family: Inter, sans-serif;
+  font-size: clamp(1rem, 0.91rem + 0.45vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #787878;
+}
+
+.card-text {
+  font-family: Inter, sans-serif;
+  font-size: clamp(1rem, 0.97rem + 0.14vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(#83665b, 0.7);
+}
+
+.card-text-white {
+  font-family: Inter, sans-serif;
+  font-size: clamp(1.1rem, 1.07rem + 0.14vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.card-text-green {
+  font-family: Inter, sans-serif;
+  font-size: clamp(0.625rem, 0.58rem + 0.23vw, 0.75rem);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #a9af8d;
 }

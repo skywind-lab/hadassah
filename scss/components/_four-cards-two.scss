@@ -1,0 +1,102 @@
+@use "../utils/index" as u;
+
+.four-cards-two {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: space-between;
+  padding: 10%;
+
+  @media (width <= 1260px) and (min-width: u.$bp-desktop) {
+    gap: 10px;
+  }
+
+  @media screen and (min-width: u.$bp-tablet) {
+    padding: 5% 20%;
+  }
+
+  @media screen and (min-width: u.$bp-desktop) {
+    flex-direction: row;
+    padding: 120px 0 0;
+  }
+}
+
+.product-card {
+  display: flex;
+  flex: 1; // чтобы каждая карточка брала одинаковую ширину
+  flex-direction: column;
+  height: 30vh;
+  min-height: 250px; /* Чтобы совсем не схлопнулась на мелких экранах */
+  overflow: hidden;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 4px 5px rgba(u.$color-secondary-dark, 0.25); /* Мягкая тень под цвет фона */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s;
+
+  @media screen and (min-width: u.$bp-tablet) {
+    height: 444px;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 15px rgba(u.$color-secondary-dark, 0.85);
+    transform: translateY(-2px);
+  }
+
+  &__image-wrap {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+
+    @media screen and (min-width: u.$bp-tablet) {
+      height: 300px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  &__category {
+    color: rgba(u.$color-secondary-dark, 0.6);
+  }
+
+  &__description {
+    @include u.micro-text;
+
+    color: u.$color-secondary-dark;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price {
+    color: u.$color-brand;
+  }
+
+  &__btn {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: u.$color-secondary-dark;
+      text-decoration: underline;
+    }
+  }
+}

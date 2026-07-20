@@ -6,6 +6,8 @@
 
   &__container {
     display: flex;
+    gap: 2rem;
+    margin: 60px 0;
   }
 }
 
@@ -16,14 +18,27 @@
   overflow: hidden;
   border-radius: 50px;
   box-shadow: 0 4px 4px rgba(#000, 0.2);
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 6px 15px rgba(u.$color-secondary-dark, 0.6);
+  }
 
   &__heder {
     display: flex;
     flex-direction: column;
+    gap: 15px;
     width: 100%;
     padding: 1rem 2rem;
     color: #fff;
+  }
+
+  &__morning {
     background-color: u.$color-yellow;
+  }
+
+  &__evening {
+    background-color: u.$color-dark-yellow;
   }
 
   &__icon {
@@ -42,7 +57,11 @@
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding: 2rem;
+    list-style: none;
     counter-reset: custom-counter; /* Для кастомной нумерации */
   }
 
@@ -59,12 +78,14 @@
     width: 28px;
     height: 28px;
     margin-right: 14px;
-
-    // font-size: 0.85rem;
-    // font-weight: 600;
     color: #7d726d;
     content: counter(custom-counter) ".";
-    background-color: #f1e4dc; /* Фоновый цвет кружков с цифрами */
+    background-color: rgba(u.$color-brand, 0.2);
     border-radius: 50%;
   }
+}
+
+.products-section {
+  display: flex;
+  flex-direction: column;
 }
