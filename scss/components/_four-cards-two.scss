@@ -5,14 +5,14 @@
   flex-direction: column;
   gap: 40px;
   justify-content: space-between;
-  padding: 10%;
+  padding: 10% 20%;
 
   @media (width <= 1260px) and (min-width: u.$bp-desktop) {
     gap: 10px;
   }
 
   @media screen and (min-width: u.$bp-tablet) {
-    padding: 5% 20%;
+    padding: 5% 25%;
   }
 
   @media screen and (min-width: u.$bp-desktop) {
@@ -26,7 +26,7 @@
   flex: 1; // чтобы каждая карточка брала одинаковую ширину
   flex-direction: column;
   height: 30vh;
-  min-height: 250px; /* Чтобы совсем не схлопнулась на мелких экранах */
+  min-height: 0;
   overflow: hidden;
   text-align: left;
   background-color: #fff;
@@ -36,7 +36,7 @@
     transform 0.3s ease,
     box-shadow 0.3s;
 
-  @media screen and (min-width: u.$bp-tablet) {
+  @media screen and (min-width: u.$bp-desktop) {
     height: 444px;
   }
 
@@ -46,8 +46,11 @@
   }
 
   &__image-wrap {
+    position: relative; // ОБЯЗАТЕЛЬНО: относительно этого блока позиционируем ссылку
     width: 100%;
-    height: 80%;
+    height: 200px;
+
+    // height: 80%;
     overflow: hidden;
 
     @media screen and (min-width: u.$bp-tablet) {
@@ -55,10 +58,43 @@
     }
   }
 
+  &__overlay-link {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    padding: 2px 7px;
+    color: u.$color-brand;
+    white-space: nowrap; // чтобы не переносился текст, если экран будет уже
+    text-decoration: none;
+    pointer-events: none; /* Чтобы мышка не цеплялась за невидимый элемент */
+    background-color: rgba(#fff, 0.8);
+    border-radius: 20px;
+
+    /* Скрываем ссылку по умолчанию */
+    opacity: 0;
+
+    /* Выравниваем ровно по центру картинки и слегка опускаем вниз в исходном состоянии */
+    transform: translate(-50%, -40%);
+
+    @include u.mini-text;
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  &:hover &__overlay-link {
+    pointer-events: auto; /* Включаем кликабельность */
+    opacity: 1;
+    transform: translate(-50%, -50%); /* Плавно всплывает точно в центр */
+  }
+
   &__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    // object-position: top 10%; /* <--- Прижимает фото к верхнему краю */
   }
 
   &__content {
@@ -72,10 +108,20 @@
     color: rgba(u.$color-secondary-dark, 0.6);
   }
 
+  &__title {
+    @media screen and (min-width: u.$bp-tablet) {
+      white-space: nowrap; // чтобы не переносился текст, если экран будет уже
+    }
+  }
+
   &__description {
     @include u.micro-text;
 
     color: u.$color-secondary-dark;
+
+    @media screen and (min-width: u.$bp-tablet) {
+      white-space: nowrap;
+    }
   }
 
   &__footer {
