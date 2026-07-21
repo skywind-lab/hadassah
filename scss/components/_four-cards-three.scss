@@ -1,0 +1,127 @@
+@use "../utils/index" as u;
+
+.four-cards-three {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 10% 20%;
+
+  @media (width <= 1260px) and (min-width: u.$bp-desktop) {
+    gap: 10px;
+  }
+
+  @media screen and (min-width: u.$bp-tablet) {
+    padding: 5% 25%;
+  }
+
+  @media screen and (min-width: u.$bp-desktop) {
+    flex-direction: row;
+    padding: 120px 0 0;
+  }
+
+  &__card {
+    display: flex;
+    flex: 1; // чтобы каждая карточка брала одинаковую ширину
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25vh;
+    min-height: 0;
+    padding: 36px;
+    overflow: hidden;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    box-shadow: 0 4px 5px rgba(u.$color-secondary-dark, 0.25); /* Мягкая тень под цвет фона */
+    fill: #fff;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s;
+
+    @media screen and (min-width: u.$bp-desktop) {
+      height: 375px;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 15px rgba(u.$color-secondary-dark, 0.85);
+      transform: translateY(-2px);
+    }
+  }
+
+  &__one {
+    background-image:
+      linear-gradient(180deg, rgb(23 11 11 / 35%) 0%, rgb(26 12 12 / 65%) 100%),
+      image-set(
+        url("/images/Makeup_eyes.webp") type("image/webp"),
+        url("/images/Makeup_eyes.jpg") type("image/jpeg")
+      );
+  }
+
+  &__two {
+    background-image:
+      linear-gradient(180deg, rgb(23 11 11 / 35%) 0%, rgb(26 12 12 / 65%) 100%),
+      image-set(
+        url("/images/Makeup_lips.webp") type("image/webp"),
+        url("/images/Makeup_lips.jpg") type("image/jpeg")
+      );
+  }
+
+  &__three {
+    background-image:
+      linear-gradient(180deg, rgb(23 11 11 / 35%) 0%, rgb(26 12 12 / 65%) 100%),
+      image-set(
+        url("/images/Makeup_face.webp") type("image/webp"),
+        url("/images/Makeup_face.jpg") type("image/jpeg")
+      );
+  }
+
+  &__four {
+    background-image:
+      linear-gradient(180deg, rgb(23 11 11 / 35%) 0%, rgb(26 12 12 / 65%) 100%),
+      image-set(
+        url("/images/Makeup_tools.webp") type("image/webp"),
+        url("/images/Makeup_tools.jpg") type("image/jpeg")
+      );
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(#fff, 0.4);
+    border-radius: 50%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__title {
+    @include u.h4-style;
+
+    color: #fff;
+  }
+
+  &__description {
+    color: #fff;
+  }
+
+  &__count {
+    @include u.micro-text;
+
+    color: rgba(#fff, 0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}

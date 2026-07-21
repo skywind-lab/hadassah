@@ -10,7 +10,243 @@
   <body>
     <!-- Heder -->
     <load src="./partials/header.html" />
-    <main></main>
+    <!-- Burger -->
+    <load src="./partials/mobile-menu.html" />
+    <main>
+      <!-- Hero -->
+      <section class="section about-hero-section">
+        <h1 class="pages-hero-title about-hero-section__title">
+          Art of Transformation
+        </h1>
+        <h3 class="pages-hero-subtitle">
+          Discover a world of endless possibilities to create the perfect look
+        </h3>
+
+        <div class="container">
+          <!-- 4 cards -->
+          <div class="four-cards-three">
+            <!-- 1 -->
+            <article class="four-cards-three__card four-cards-three__one">
+              <div class="four-cards-three__icon">
+                <svg width="40" height="40">
+                  <use href="./images/icons.svg#icon-eye"></use>
+                </svg>
+              </div>
+              <div class="four-cards-three__content">
+                <h4 class="four-cards-three__title">For Eyes</h4>
+                <p class="mini-text four-cards-three__description">
+                  Eyeshadows, mascara, eyeliners
+                </p>
+                <a href="#" class="four-cards-three__count">12 products</a>
+              </div>
+            </article>
+
+            <!-- 2 -->
+            <article class="four-cards-three__card four-cards-three__two">
+              <div class="four-cards-three__icon">
+                <svg width="40" height="40">
+                  <use href="./images/icons.svg#icon-eye"></use>
+                </svg>
+              </div>
+              <div class="four-cards-three__content">
+                <h4 class="four-cards-three__title">For Lips</h4>
+                <p class="mini-text four-cards-three__description">
+                  Lipsticks, glosses, liners
+                </p>
+                <a href="#" class="four-cards-three__count">15 products</a>
+              </div>
+            </article>
+
+            <!-- 3 -->
+            <article class="four-cards-three__card four-cards-three__three">
+              <div class="four-cards-three__icon">
+                <svg width="40" height="40">
+                  <use href="./images/icons.svg#icon-eye"></use>
+                </svg>
+              </div>
+              <div class="four-cards-three__content">
+                <h4 class="four-cards-three__title">For Face</h4>
+                <p class="mini-text four-cards-three__description">
+                  Foundations, blushes
+                </p>
+                <a href="#" class="four-cards-three__count">10 products</a>
+              </div>
+            </article>
+
+            <!-- 4 -->
+            <article class="four-cards-three__card four-cards-three__four">
+              <div class="four-cards-three__icon">
+                <svg width="40" height="40">
+                  <use href="./images/icons.svg#icon-eye"></use>
+                </svg>
+              </div>
+              <div class="four-cards-three__content">
+                <h4 class="four-cards-three__title">Tools</h4>
+                <p class="mini-text four-cards-three__description">
+                  Brushes, sponges, accessories
+                </p>
+                <a href="#" class="four-cards-three__count">8 products</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Best Sellers -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Skincare Programs</h2>
+          <h5 class="section-subtitle">Create your perfect beauty ritual</h5>
+          <!-- 4 cards -->
+          <div class="four-cards-two">
+            <!-- 1 -->
+            <article class="product-card">
+              <div class="product-card__image-wrap">
+                <picture>
+                  <source
+                    srcset="./images/Makup_palette.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./images/Makup_palette.jpg"
+                    alt="Skincare set"
+                    class="product-card__image"
+                  />
+                </picture>
+                <a href="#" class="product-card__overlay-link">View Details</a>
+              </div>
+
+              <div class="product-card__content">
+                <p class="mini-text product-card__category">Bestseller</p>
+                <p class="card-title product-card__title">
+                  Nude Eyeshadow Palette
+                </p>
+                <p class="product-card__description">
+                  12 shades to create any look
+                </p>
+                <div class="product-card__footer">
+                  <p class="product-card__price">€42</p>
+                  <button
+                    class="card-text-green product-card__btn"
+                    type="button"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- 2 -->
+            <article class="product-card">
+              <div class="product-card__image-wrap">
+                <picture>
+                  <source
+                    srcset="./images/Makup_lipstick.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./images/Makup_lipstick.jpg"
+                    alt="Skincare set"
+                    class="product-card__image"
+                  />
+                </picture>
+                <a href="#" class="product-card__overlay-link">View Details</a>
+              </div>
+
+              <div class="product-card__content">
+                <p class="mini-text product-card__category">New</p>
+                <p class="card-title product-card__title">
+                  Velvet Kiss Matte Lipstick
+                </p>
+                <p class="product-card__description">
+                  Up to 12 hours wear, non-drying
+                </p>
+                <div class="product-card__footer">
+                  <p class="product-card__price">€26</p>
+                  <button
+                    class="card-text-green product-card__btn"
+                    type="button"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- 3 -->
+            <article class="product-card">
+              <div class="product-card__image-wrap">
+                <picture>
+                  <source
+                    srcset="./images/Makup_mascara.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./images/Makup_mascara.jpg"
+                    alt="Skincare set"
+                    class="product-card__image"
+                  />
+                </picture>
+                <a href="#" class="product-card__overlay-link">View Details</a>
+              </div>
+
+              <div class="product-card__content">
+                <p class="mini-text product-card__category">Wow Effect</p>
+                <p class="card-title product-card__title">
+                  Infinite Length Mascara
+                </p>
+                <p class="product-card__description">
+                  Length and volume without clumps
+                </p>
+                <div class="product-card__footer">
+                  <p class="product-card__price">€58</p>
+                  <button
+                    class="card-text-green product-card__btn"
+                    type="button"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- 4 -->
+            <article class="product-card">
+              <div class="product-card__image-wrap">
+                <picture>
+                  <source
+                    srcset="./images/Makup_foundation.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./images/Makup_foundation.jpg"
+                    alt="Skincare set"
+                    class="product-card__image"
+                  />
+                </picture>
+                <a href="#" class="product-card__overlay-link">View Details</a>
+              </div>
+
+              <div class="product-card__content">
+                <p class="mini-text product-card__category">Premium</p>
+                <p class="card-title product-card__title">
+                  Flawless Skin Foundation
+                </p>
+                <p class="product-card__description">
+                  Natural coverage, SPF 30
+                </p>
+                <div class="product-card__footer">
+                  <p class="product-card__price">€41</p>
+                  <button
+                    class="card-text-green product-card__btn"
+                    type="button"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- Footer -->
     <load src="./partials/footer.html" />
 

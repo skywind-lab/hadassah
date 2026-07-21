@@ -19,6 +19,7 @@
 @use "components/links";
 @use "components/four-cards-one";
 @use "components/four-cards-two";
+@use "components/four-cards-three";
 
 // 5. Секции сайта
 @use "layouts/header";
@@ -35,3 +36,4 @@
 // 6. Страницы
 @use "pages/about";
 @use "pages/skincare";
+@use "pages/makeup";
