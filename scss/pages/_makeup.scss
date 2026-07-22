@@ -1,1 +1,27 @@
 @use "../utils/index" as u;
+
+.masterclasses-section {
+  padding: 40px;
+  color: #fff;
+  background-color: u.$color-green;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Отступы между абзацами */
+  }
+
+  &__title {
+    @include u.h2-style;
+  }
+
+  &__text {
+    @include u.body-text;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    justify-content: end;
+    padding: 2rem 0;
+  }
+}

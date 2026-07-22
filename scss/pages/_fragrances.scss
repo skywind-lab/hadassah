@@ -1,0 +1,74 @@
+@use "../utils/index" as u;
+
+.quiz-section {
+  padding: 40px;
+  background-color: u.$color-yellow;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr; /* В один столбик */
+    align-items: center;
+
+    @media screen and (min-width: u.$bp-tablet) {
+      gap: 0;
+    }
+
+    @media screen and (min-width: u.$bp-desktop) {
+      grid-template-columns: 1fr 1.5fr;
+      gap: 40px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Отступы между абзацами */
+  }
+
+  &__title {
+    @include u.h2-style;
+
+    color: u.$color-secondary-dark;
+  }
+
+  &__text {
+    @include u.body-text;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    justify-content: end;
+    padding: 2rem 0;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    height: 50vh;
+    margin: 0 1rem;
+    overflow: hidden;
+    border-radius: 24px;
+
+    @media screen and (width <= 480px) {
+      margin: 0 -3rem;
+    }
+
+    @media screen and (min-width: u.$bp-tablet) {
+      height: 70vh;
+      margin: 0 3rem;
+    }
+
+    @media screen and (min-width: u.$bp-desktop) {
+      align-items: flex-end;
+      height: auto;
+      margin: 0;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover; /* Чтобы картинка красиво заполняла блок без деформации */
+    object-position: center bottom;
+  }
+}

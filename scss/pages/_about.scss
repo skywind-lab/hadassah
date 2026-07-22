@@ -19,12 +19,15 @@
     }
   }
 
+  &__subtitle {
+    margin-bottom: 60px;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: 1fr; /* В один столбик */
     gap: 40px; /* Расстояние между текстом и картинкой */ /* Выравнивание по вертикали (по центру) */
     align-items: center;
-    padding: 3rem;
 
     @media screen and (min-width: u.$bp-desktop) {
       grid-template-columns: 1fr 1.5fr;
