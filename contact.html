@@ -19,58 +19,307 @@
         <h3 class="pages-hero-subtitle">
           We're always happy to help you choose and answer all your questions
         </h3>
-      </section>
-      <div class="container">
-        <!-- 4 cards -->
-        <div class="four-cards-four">
-          <!-- 1 -->
-          <article class="four-cards-four__card">
-            <div class="four-cards-four__icon">
-              <svg width="35" height="35">
-                <use href="./images/icons.svg#icon-address"></use>
-              </svg>
-            </div>
-            <h5 class="four-cards-four__subtitle">Address</h5>
-            <p class="card-text">Paris, Rue de Rivoli, 42</p>
-            <p class="four-cards-four__comment">
-              Flagship boutique on 1st floor
-            </p>
-          </article>
-          <!-- 2 -->
-          <article class="four-cards-four__card">
-            <div class="four-cards-four__icon">
-              <svg width="35" height="35">
-                <use href="./images/icons.svg#icon-tel"></use>
-              </svg>
-            </div>
-            <h5 class="four-cards-four__subtitle">Phone</h5>
-            <p class="card-text">+33 1 42 60 34 56</p>
-            <p class="four-cards-four__comment">Calls accepted daily</p>
-          </article>
-          <!-- 3 -->
-          <article class="four-cards-four__card">
-            <div class="four-cards-four__icon">
-              <svg width="35" height="35">
-                <use href="./images/icons.svg#icon-mail"></use>
-              </svg>
-            </div>
-            <h5 class="four-cards-four__subtitle">Email</h5>
-            <p class="card-text">hello@hadassah.com</p>
-            <p class="four-cards-four__comment">We reply within 24 hours</p>
-          </article>
-          <!-- 4 -->
-          <article class="four-cards-four__card">
-            <div class="four-cards-four__icon">
-              <svg width="35" height="35">
-                <use href="./images/icons.svg#icon-clocks"></use>
-              </svg>
-            </div>
-            <h5 class="four-cards-four__subtitle">Opening Hours</h5>
-            <p class="card-text">Mon-Sun: 10:00 - 20:00</p>
-            <p class="four-cards-four__comment">Open every day</p>
-          </article>
+        <div class="container">
+          <!-- 4 cards -->
+          <div class="four-cards-four">
+            <!-- 1 -->
+            <article class="four-cards-four__card">
+              <div class="four-cards-four__icon">
+                <svg width="35" height="35">
+                  <use href="./images/icons.svg#icon-address"></use>
+                </svg>
+              </div>
+              <h5 class="four-cards-four__subtitle">Address</h5>
+              <p class="card-text">Paris, Rue de Rivoli, 42</p>
+              <p class="four-cards-four__comment">
+                Flagship boutique on 1st floor
+              </p>
+            </article>
+            <!-- 2 -->
+            <article class="four-cards-four__card">
+              <div class="four-cards-four__icon">
+                <svg width="35" height="35">
+                  <use href="./images/icons.svg#icon-tel"></use>
+                </svg>
+              </div>
+              <h5 class="four-cards-four__subtitle">Phone</h5>
+              <p class="card-text">+33 1 42 60 34 56</p>
+              <p class="four-cards-four__comment">Calls accepted daily</p>
+            </article>
+            <!-- 3 -->
+            <article class="four-cards-four__card">
+              <div class="four-cards-four__icon">
+                <svg width="35" height="35">
+                  <use href="./images/icons.svg#icon-mail"></use>
+                </svg>
+              </div>
+              <h5 class="four-cards-four__subtitle">Email</h5>
+              <p class="card-text">hello@hadassah.com</p>
+              <p class="four-cards-four__comment">We reply within 24 hours</p>
+            </article>
+            <!-- 4 -->
+            <article class="four-cards-four__card">
+              <div class="four-cards-four__icon">
+                <svg width="35" height="35">
+                  <use href="./images/icons.svg#icon-clocks"></use>
+                </svg>
+              </div>
+              <h5 class="four-cards-four__subtitle">Opening Hours</h5>
+              <p class="card-text">Mon-Sun: 10:00 - 20:00</p>
+              <p class="four-cards-four__comment">Open every day</p>
+            </article>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!-- Contacts -->
+      <section class="section contacts-section">
+        <div class="container contacts-section__container">
+          <div class="contacts-section__left">
+            <h2 class="section-title">Write to Us</h2>
+            <h5 class="mini-subtitle">
+              Fill out the form and our specialists will contact you shortly
+            </h5>
+
+            <!-- contact-form -->
+            <form
+              class="contact-form"
+              name="contact-form"
+              action="#"
+              method="post"
+            >
+              <div class="contact-form__form-row">
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  name="user-name"
+                  id="user-name"
+                  class="input"
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="user-email"
+                  id="user-email"
+                  class="input"
+                />
+              </div>
+
+              <input
+                type="tel"
+                placeholder="Phone"
+                name="user-tel"
+                id="user-tel"
+                class="input"
+              />
+              <input
+                type="text"
+                placeholder="Subject"
+                name="user-subject"
+                id="user-subject"
+                class="input"
+              />
+              <textarea
+                placeholder="Your message"
+                name="user-message"
+                id="user-message"
+                class="form-textarea"
+                rows="5"
+              ></textarea>
+              <button type="submit" class="contact-form__btn">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div contacts-section__right>
+            <h2 class="section-title">Our Stores</h2>
+            <h5 class="mini-subtitle">
+              Visit our flagship boutiques in major European cities
+            </h5>
+
+            <div class="contacts-section__list">
+              <!-- Карточка: London -->
+              <div class="store-card">
+                <h3 class="store-card__city">London</h3>
+                <p class="store-card__info address">
+                  <svg
+                    class="store-card__icon"
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="./images/icons.svg#icon-address"></use>
+                  </svg>
+                  Oxford Street, 128
+                </p>
+                <p class="store-card__info phone">
+                  <svg
+                    class="store-card__icon"
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="./images/icons.svg#icon-tel"></use>
+                  </svg>
+                  +44 20 7946 0958
+                </p>
+                <p class="store-card__info hours">
+                  <svg
+                    class="store-card__icon"
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="./images/icons.svg#icon-clocks"></use>
+                  </svg>
+                  10:00 - 20:00
+                </p>
+                <a href="#" class="store-card__link">Get Directions &rarr;</a>
+              </div>
+
+              <!-- Карточка: Paris -->
+              <div class="store-card">
+                <h3 class="store-card__city">Paris</h3>
+                <p class="store-card__info address">
+                  <svg
+                    class="store-card__icon"
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="./images/icons.svg#icon-address"></use>
+                  </svg>
+                  Rue de Rivoli, 42
+                </p>
+                <p class="store-card__info phone">
+                  <svg
+                    class="store-card__icon"
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="./images/icons.svg#icon-tel"></use>
+                  </svg>
+                  +33 1 42 60 34 56
+                </p>
+                <p class="store-card__info hours">
+                  <svg
+                    class="store-card__icon"
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="./images/icons.svg#icon-clocks"></use>
+                  </svg>
+                  10:00 - 20:00
+                </p>
+                <a href="#" class="store-card__link">Get Directions &rarr;</a>
+              </div>
+
+              <!-- Карточка: Milan -->
+              <div class="store-card">
+                <h3 class="store-card__city">Milan</h3>
+                <p class="store-card__info address">
+                  <svg
+                    class="store-card__icon"
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="./images/icons.svg#icon-address"></use>
+                  </svg>
+                  Via Montenapoleone, 15
+                </p>
+                <p class="store-card__info phone">
+                  <svg
+                    class="store-card__icon"
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="./images/icons.svg#icon-tel"></use>
+                  </svg>
+                  +39 02 7600 1234
+                </p>
+                <p class="store-card__info hours">
+                  <svg
+                    class="store-card__icon"
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                  >
+                    <use href="./images/icons.svg#icon-clocks"></use>
+                  </svg>
+                  10:00 - 19:00
+                </p>
+                <a href="#" class="store-card__link">Get Directions &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Follow Us on Social Media</h2>
+          <h5 class="section-subtitle">
+            Stay connected for news and inspiration
+          </h5>
+          <!-- 4 cards -->
+          <div class="three-cards-four">
+            <!-- 1 -->
+            <article class="three-cards-four__card">
+              <div class="three-cards-four__icon">
+                <svg width="35" height="35">
+                  <use href="./images/icons.svg#icon-insta"></use>
+                </svg>
+              </div>
+              <h5 class="three-cards-four__subtitle">Instagram</h5>
+              <p class="card-text">@hadassah_beauty</p>
+            </article>
+            <!-- 2 -->
+            <article class="three-cards-four__card">
+              <div class="three-cards-four__icon">
+                <svg width="35" height="35">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </div>
+              <h5 class="three-cards-four__subtitle">Facebook</h5>
+              <p class="card-text">hadassah.beauty</p>
+            </article>
+            <!-- 3 -->
+            <article class="three-cards-four__card">
+              <div class="three-cards-four__icon">
+                <svg width="35" height="35">
+                  <use href="./images/icons.svg#icon-youtube"></use>
+                </svg>
+              </div>
+              <h5 class="three-cards-four__subtitle">YouTube</h5>
+              <p class="card-text">HADASSAH Beauty</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Free Shipping -->
+      <section class="section shipping-section">
+        <div class="container getoff-section__container">
+          <h2 class="getoff-section__title">Free Shipping Across Europe</h2>
+          <p class="card-text-white getoff-section__text">
+            On orders over €50, shipping is free to any European country.
+            Delivery usually takes 3-7 days.
+          </p>
+          <div class="getoff-section__buttons">
+            <button
+              class="button getoff-section__btn сonsultation-section__btn"
+              type="button"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- Footer -->
     <load src="./partials/footer.html" />

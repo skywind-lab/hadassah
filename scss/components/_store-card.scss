@@ -1,0 +1,50 @@
+@use "../utils/index" as u;
+
+.store-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 34px 54px;
+  outline: none;
+  border: 1px solid rgba(u.$color-brand, 0.5);
+  border-radius: 12px;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 4px 5px rgba(u.$color-secondary-dark, 0.4);
+  }
+
+  &__city {
+    @include u.h5-style;
+
+    margin-bottom: 14px;
+    font-weight: 600;
+    color: u.$color-secondary-dark;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    fill: u.$color-brand;
+    stroke: u.$color-brand;
+  }
+
+  &__info {
+    @include u.body-text;
+
+    color: rgba(u.$color-secondary-dark, 0.7);
+  }
+
+  &__link {
+    @include u.body-text;
+
+    margin-top: 12px;
+    font-weight: 600;
+    color: u.$color-brand;
+    transition: all 0.2s;
+
+    &:hover {
+      color: u.$color-secondary-dark;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@use "../utils/index" as u;
+
+.three-cards-four {
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  justify-content: space-between;
+  padding: 10%;
+  margin: 0 5%;
+
+  @media (width <= 1260px) and (min-width: u.$bp-desktop) {
+    gap: 10px;
+  }
+
+  @media screen and (min-width: u.$bp-tablet) {
+    padding: 5% 20%;
+  }
+
+  @media screen and (min-width: u.$bp-desktop) {
+    flex-direction: row;
+    padding: 120px 0 0;
+  }
+
+  &__card {
+    display: flex;
+    flex: 1; // чтобы каждая карточка брала одинаковую ширину
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    border: 2px solid rgba(u.$color-brand, 0.3);
+    border-radius: 30px;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0 4px 5px rgba(u.$color-secondary-dark, 0.4);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(u.$color-brand, 0.2);
+    border-radius: 50%;
+    fill: u.$color-secondary-dark;
+  }
+
+  &__subtitle {
+    @include u.h5-style;
+
+    color: u.$color-secondary-dark;
+  }
+
+  &__count {
+    @include u.mini-text;
+
+    color: rgba(u.$color-secondary-dark, 0.6);
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: u.$color-secondary-dark;
+      text-decoration: underline;
+    }
+  }
+
+  &__comment {
+    @include u.mini-text;
+
+    color: rgba(u.$color-secondary-dark, 0.6);
+  }
+}

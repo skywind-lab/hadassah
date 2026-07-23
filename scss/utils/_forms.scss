@@ -79,3 +79,72 @@
     color: u.$color-primary-light; /* Цвет стрелочки */
   }
 }
+
+// Contact-form
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 60px;
+
+  &__form-row {
+    display: flex;
+    flex: 1;
+    gap: 16px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрируем текст внутри флекса */
+    width: 100%;
+    padding: 18px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: u.$color-green;
+    border: none;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0 4px 10px rgba(u.$color-secondary-dark, 0.4);
+    }
+
+    &:active {
+      transform: scale(0.98); // Кнопка слегка вдавливается при клике
+    }
+  }
+}
+
+.input {
+  flex: 1;
+}
+
+.input,
+.form-textarea {
+  width: 100%;
+  padding: 14px 18px;
+  color: #292828;
+  outline: none;
+  border: 1px solid rgba(u.$color-brand, 0.5);
+  border-radius: 12px;
+  transition: border-color 0.2s;
+
+  &::placeholder,
+  .form-textarea::placeholder {
+    color: rgba(u.$color-secondary-dark, 0.5);
+  }
+
+  &:focus,
+  .form-textarea:focus {
+    border-color: rgba(u.$color-brand, 0.8);
+  }
+}
+
+.form-textarea {
+  min-height: 140px; // Поле не станет меньше 140 пикселей по высоте, даже если пользователь попробует сжать его вверх до упора
+  resize: vertical; // Пользователь может тянуть уголок только по вертикали
+}

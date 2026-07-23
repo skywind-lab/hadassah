@@ -1,0 +1,26 @@
+@use "../utils/index" as u;
+
+.contacts-section {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 60px;
+  }
+}
+
+.shipping-section {
+  margin-top: 60px;
+  text-align: center;
+  background-color: rgba(u.$color-green, 0.7);
+
+  &__btn {
+    color: u.$color-secondary-dark;
+  }
+}
