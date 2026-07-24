@@ -16,6 +16,7 @@ export default defineConfig({
         makeup: resolve(__dirname, "makeup.html"),
         fragrances: resolve(__dirname, "fragrances.html"),
         contact: resolve(__dirname, "contact.html"),
+        catalog: resolve(__dirname, "catalog.html"),
         // Если в будущем появятся новые страницы, ты просто добавишь их сюда через запятую:
       },
     },
