@@ -23,6 +23,7 @@
 @use "components/four-cards-four";
 @use "components/store-card";
 @use "components/three-cards-four";
+@use "components/search-bar";
 
 // 5. Секции сайта
 @use "layouts/header";
@@ -42,3 +43,4 @@
 @use "pages/makeup";
 @use "pages/fragrances";
 @use "pages/contacts";
+@use "pages/catalog";

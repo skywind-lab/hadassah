@@ -1,0 +1,148 @@
+@use "../utils/index" as u;
+
+.catalog-hero-container {
+  margin-top: 40px;
+}
+
+.catalog-section {
+  &__layout {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__main {
+    flex-grow: 1;
+  }
+}
+
+.sidebar {
+  flex-shrink: 0;
+  width: 230px;
+
+  &__filter-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 24px;
+    background-color: #f5e8e5;
+    border-radius: 12px;
+  }
+
+  &__title {
+    @include u.h5-style;
+
+    font-weight: 600;
+    color: u.$color-secondary-dark;
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+  }
+
+  &__categories li {
+    display: flex;
+    justify-content: space-between;
+
+    @include u.mini-text;
+
+    color: u.$color-secondary-dark;
+  }
+
+  &__categories a {
+    text-decoration: none;
+    transition:
+      color,
+      font-weight 0.2s;
+
+    &:hover {
+      font-weight: 600;
+      color: u.$color-brand;
+    }
+  }
+
+  &__count {
+    font-weight: 600;
+  }
+}
+
+.price-filter {
+  &__slider {
+    width: 100%;
+    accent-color: u.$color-brand;
+    cursor: pointer;
+  }
+
+  &__values {
+    display: flex;
+    justify-content: space-between;
+
+    @include u.body-text;
+
+    color: u.$color-secondary-dark;
+  }
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+
+  &__select {
+    position: relative;
+    width: 180px;
+
+    /* Класс .is-open вешается прямо на .toolbar__select */
+    &.is-open {
+      /* Когда на .toolbar__select есть класс .is-open, 
+         находим внутри него .toolbar__dropdown и показываем */
+      &__dropdown {
+        position: absolute;
+        top: calc(100% + 4px);
+        left: 0;
+        z-index: 10;
+        visibility: hidden;
+        width: 100%;
+        padding: 6px 0;
+        list-style: none;
+        background-color: #f3e5e1;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgb(0 0 0 / 6%);
+        opacity: 0;
+        transform: translateY(-6px);
+        transition: all 0.2s ease;
+      }
+
+      &__arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    color: #5c433e;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    border: 1px solid #ebdcd8;
+    border-radius: 20px;
+  }
+
+  &__dropdown {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  &__option {
+    cursor: pointer;
+  }
+}

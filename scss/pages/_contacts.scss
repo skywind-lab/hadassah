@@ -3,8 +3,18 @@
 .contacts-section {
   &__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 120px;
+    margin: 0 2rem;
+
+    @media screen and (min-width: u.$bp-tablet) {
+      margin: 0 5rem;
+    }
+
+    @media screen and (min-width: u.$bp-desktop) {
+      grid-template-columns: 1fr 1fr;
+      margin: 0 auto;
+    }
   }
 
   &__list {
@@ -18,7 +28,7 @@
 .shipping-section {
   margin-top: 60px;
   text-align: center;
-  background-color: rgba(u.$color-green, 0.7);
+  background-color: u.$color-green;
 
   &__btn {
     color: u.$color-secondary-dark;

@@ -16,16 +16,158 @@
       <!-- Hero -->
       <section class="section about-hero-section">
         <h1 class="pages-hero-title about-hero-section__title">
-          Art of Transformation
+          Product Catalog
         </h1>
         <h3 class="pages-hero-subtitle">
-          Discover a world of endless possibilities to create the perfect look
+          Discover the full range of HADASSAH cosmetics
         </h3>
+
+        <div class="container catalog-hero-container">
+          <div class="search-bar">
+            <svg class="search-bar__icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-search"></use>
+            </svg>
+            <input
+              class="search-bar__input"
+              type="text"
+              placeholder="Search products..."
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Catalog Section -->
+      <section class="section catalog-section">
+        <div class="catalog-section__layout">
+          <!-- Сайдбар с фильтрами (В WP это станет sidebar.php / WooCommerce Widgets) -->
+          <aside class="sidebar">
+            <div class="sidebar__filter-widget">
+              <h5 class="sidebar__title">Categories</h5>
+              <ul class="sidebar__categories">
+                <li>
+                  <a href="#">All</a><span class="sidebar__count">(40)</span>
+                </li>
+                <li>
+                  <a href="#">Skincare</a
+                  ><span class="sidebar__count">(18)</span>
+                </li>
+                <li>
+                  <a href="#">Makeup</a><span class="sidebar__count">(15)</span>
+                </li>
+                <li>
+                  <a href="#">Fragrances</a
+                  ><span class="sidebar__count">(8)</span>
+                </li>
+                <li>
+                  <a href="#">New Arrivals</a
+                  ><span class="sidebar__count">(7)</span>
+                </li>
+              </ul>
+
+              <h5 class="sidebar__title sidebar__price">Price Range</h5>
+              <div class="price-filter">
+                <input
+                  type="range"
+                  class="price-filter__slider"
+                  min="0"
+                  max="150"
+                  value="150"
+                />
+                <div class="price-filter__values">
+                  <span>€0</span>
+                  <span>€150</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Products -->
+          <div class="catalog-section__main"></div>
+
+          <!-- Toolbar -->
+          <div class="toolbar">
+            <div class="toolbar__select" id="sortSelect">
+              <button class="toolbar__btn" type="button">
+                <span class="toolbar__selected">Popular</span>
+                <svg
+                  class="toolbar__arrow"
+                  width="10"
+                  height="6"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                >
+                  <path
+                    d="M1 1L5 5L9 1"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+              <ul class="toolbar__dropdown">
+                <li class="toolbar__option active" data-value="popular">
+                  Popular
+                </li>
+                <li class="toolbar__option" data-value="price-low">
+                  Price: Low to High
+                </li>
+                <li class="toolbar__option" data-value="price-high">
+                  Price: High to Low
+                </li>
+                <li class="toolbar__option" data-value="newest">Newest</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Сетка товаров (Стандартная структура Woo: ul.products > li.product) -->
+          <ul class="catalog-section__product-grid">
+            <li
+              class="product-card catalog-section__card"
+              data-price="48"
+              data-category="skincare"
+            >
+              <div class="product-card__image-wrap">
+                <picture>
+                  <source
+                    srcset="./images/Skincare_acid.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./images/Skincare_acid.jpg"
+                    alt="Skincare set"
+                    class="product-card__image"
+                  />
+                </picture>
+                <a href="#" class="product-card__overlay-link">View Details</a>
+              </div>
+
+              <div class="product-card__content">
+                <p class="mini-text product-card__category">Hydration</p>
+                <p class="card-title product-card__title">
+                  Hyaluronic Acid Serum
+                </p>
+                <p class="product-card__description">
+                  Intensive hydration for 72 hours
+                </p>
+                <div class="product-card__footer">
+                  <p class="product-card__price">€52</p>
+                  <button
+                    class="card-text-green product-card__btn"
+                    type="button"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <!-- Footer -->
     <load src="./partials/footer.html" />
 
-    <script src="./js/mobile-menu.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/toolbar.js"></script>
   </body>
 </html>

@@ -1,0 +1,36 @@
+@use "../utils/index" as u;
+
+.search-bar {
+  position: relative;
+  max-width: 450px;
+  margin: 0 auto;
+
+  &__input {
+    width: 100%;
+    padding: 12px 16px 12px 44px;
+    color: rgb(69 54 55);
+    outline: none;
+    border: 1px solid rgba(u.$color-secondary-dark, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(u.$color-secondary-dark, 0.3);
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: rgba(u.$color-secondary-dark, 0.7);
+    }
+
+    &:focus {
+      border-color: rgba(u.$color-secondary-dark, 0.5);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    fill: rgba(u.$color-secondary-dark, 0.7);
+    transform: translateY(-50%);
+
+    // Этот трюк — классический способ идеально отцентровать элемент по вертикали внутри родителя.
+  }
+}
