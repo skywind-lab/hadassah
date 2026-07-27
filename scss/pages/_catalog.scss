@@ -5,15 +5,115 @@
 }
 
 .catalog-section {
+  flex-direction: column;
+
+  &__selection {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
   &__layout {
     display: flex;
-    gap: 32px;
+    gap: 50px;
   }
 
   &__main {
+    display: flex;
     flex-grow: 1;
+    flex-direction: column;
+  }
+
+  &__product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    list-style: none;
   }
 }
+
+// Выпадающий список
+
+.custom-select {
+  position: relative;
+  display: flex;
+
+  &.is-open {
+    .custom-select__arrow {
+      transform: rotate(180deg);
+    }
+
+    /* Когда на .toolbar__select есть класс .is-open,
+//находим внутри него .toolbar__dropdown и показываем */
+    .custom-select__dropdown {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      z-index: 10;
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__button {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    width: max-content;
+    min-width: 160px;
+    padding: 8px 20px;
+    color: u.$color-secondary-dark;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid rgba(u.$color-brand, 0.3);
+    border-radius: 20px;
+
+    @include u.mini-text;
+  }
+
+  &__arrow {
+    flex-shrink: 0;
+    transition: transform 0.5s ease;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 20;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    visibility: hidden;
+    padding: 6px 0;
+    margin: 0;
+    color: u.$color-secondary-dark;
+    list-style: none;
+    background-color: #f3e5e1;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(u.$color-secondary-dark, 0.3);
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: all 0.2s ease;
+
+    @include u.mini-text;
+  }
+
+  &__option {
+    padding: 8px 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(#000, 0.04);
+    }
+
+    &.is-active {
+      font-weight: 600;
+    }
+  }
+}
+
+// Sidebar
 
 .sidebar {
   flex-shrink: 0;
@@ -68,14 +168,30 @@
   }
 }
 
-.price-filter {
+.price-range {
+  position: relative;
+  display: flex;
+  align-items: center;
+
   &__slider {
     width: 100%;
-    accent-color: u.$color-brand;
-    cursor: pointer;
+    height: 0.5rem;
+    appearance: none;
+    background-color: rgba(u.$color-secondary-dark, 0.3);
+    border-radius: 25px;
+
+    &::-webkit-slider-thumb {
+      width: 16px;
+      height: 16px;
+      appearance: none;
+      cursor: pointer;
+      background-color: #a38283;
+      border-radius: 50%;
+      transition: transform 0.15s ease;
+    }
   }
 
-  &__values {
+  &__labels {
     display: flex;
     justify-content: space-between;
 
@@ -85,64 +201,47 @@
   }
 }
 
-.toolbar {
+.pagination {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
+  justify-content: center;
+  margin: 80px 0;
 
-  &__select {
-    position: relative;
-    width: 180px;
-
-    /* Класс .is-open вешается прямо на .toolbar__select */
-    &.is-open {
-      /* Когда на .toolbar__select есть класс .is-open, 
-         находим внутри него .toolbar__dropdown и показываем */
-      &__dropdown {
-        position: absolute;
-        top: calc(100% + 4px);
-        left: 0;
-        z-index: 10;
-        visibility: hidden;
-        width: 100%;
-        padding: 6px 0;
-        list-style: none;
-        background-color: #f3e5e1;
-        border-radius: 6px;
-        box-shadow: 0 4px 12px rgb(0 0 0 / 6%);
-        opacity: 0;
-        transform: translateY(-6px);
-        transition: all 0.2s ease;
-      }
-
-      &__arrow {
-        transform: rotate(180deg);
-      }
-    }
+  &__list {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
-  &__btn {
+  &__link {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 8px 16px;
-    font-size: 0.85rem;
-    color: #5c433e;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    font-family: Inter, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: rgba(u.$color-secondary-dark, 0.8);
     cursor: pointer;
-    outline: none;
-    background: #fff;
-    border: 1px solid #ebdcd8;
-    border-radius: 20px;
-  }
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
 
-  &__dropdown {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-6px);
-  }
+    &:hover {
+      background-color: rgba(u.$color-brand, 0.3);
+    }
 
-  &__option {
-    cursor: pointer;
+    &.is-active {
+      color: u.$color-secondary-dark;
+      cursor: default;
+      background-color: rgba(u.$color-brand, 0.25);
+    }
   }
 }

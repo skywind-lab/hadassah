@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const customSelect = document.getElementById("sortSelect");
   if (!customSelect) return;
 
-  const selectBtn = customSelect.querySelector(".select-button");
-  const selectedValue = customSelect.querySelector(".selected-value");
-  const options = customSelect.querySelectorAll(".option");
+  const selectBtn = customSelect.querySelector(".custom-select__button");
+  const selectedValue = customSelect.querySelector(".custom-select__value");
+  const options = customSelect.querySelectorAll(".custom-select__option");
 
   // Переключение открытия/закрытия
   selectBtn.addEventListener("click", (e) => {
@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     option.addEventListener("click", () => {
       selectedValue.textContent = option.textContent;
 
-      options.forEach((opt) => opt.classList.remove("active"));
-      option.classList.add("active");
+      options.forEach((opt) => opt.classList.remove("is-active"));
+      option.classList.add("is-active");
 
       customSelect.classList.remove("is-open");
     });

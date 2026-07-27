@@ -26,3 +26,14 @@ $bp-desktop: 1024px;
 
 // Большие мониторы
 $bp-large: 1440px;
+
+// Миксин для трека (полосы)
+@mixin range-track {
+  &::-webkit-slider-runnable-track {
+    @content;
+  }
+
+  &::-moz-range-track {
+    @content;
+  }
+}
