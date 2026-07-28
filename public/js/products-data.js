@@ -6,8 +6,8 @@ const products = [
     title: "Hyaluronic Acid Serum",
     description: "Intensive hydration for 72 hours",
     price: 52,
-    imageWebp: "./images/Skincare_acid.webp",
-    imageJpg: "./images/Skincare_acid.jpg",
+    imageWebp: "images/Skincare_acid.webp",
+    imageJpg: "images/Skincare_acid.jpg",
     alt: "Skincare set",
   },
 
