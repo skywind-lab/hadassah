@@ -25,7 +25,7 @@
   display: flex;
   flex: 1; // чтобы каждая карточка брала одинаковую ширину
   flex-direction: column;
-  height: 30vh;
+  height: 444px;
   min-height: 0;
   overflow: hidden;
   text-align: left;
@@ -36,10 +36,6 @@
     transform 0.3s ease,
     box-shadow 0.3s;
 
-  @media screen and (min-width: u.$bp-desktop) {
-    height: 444px;
-  }
-
   &:hover {
     box-shadow: 0 4px 15px rgba(u.$color-secondary-dark, 0.85);
     transform: translateY(-2px);
@@ -48,14 +44,8 @@
   &__image-wrap {
     position: relative; // ОБЯЗАТЕЛЬНО: относительно этого блока позиционируем ссылку
     width: 100%;
-    height: 200px;
-
-    // height: 80%;
+    height: 300px;
     overflow: hidden;
-
-    @media screen and (min-width: u.$bp-tablet) {
-      height: 300px;
-    }
   }
 
   &__overlay-link {

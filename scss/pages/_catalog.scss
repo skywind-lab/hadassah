@@ -15,7 +15,16 @@
 
   &__layout {
     display: flex;
-    gap: 50px;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (width >= 430px) {
+      flex-direction: row;
+    }
+
+    @media screen and (min-width: u.$bp-desktop) {
+      gap: 50px;
+    }
   }
 
   &__main {
@@ -26,9 +35,23 @@
 
   &__product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 40px;
+    padding: 0 10%;
     list-style: none;
+
+    @media screen and (width >= 430px) {
+      padding: 0 10% 0 0;
+    }
+
+    @media screen and (min-width: u.$bp-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: u.$bp-desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0;
+    }
   }
 }
 
@@ -117,15 +140,22 @@
 
 .sidebar {
   flex-shrink: 0;
-  width: 230px;
+
+  @media screen and (min-width: u.$bp-tablet) {
+    width: 230px;
+  }
 
   &__filter-widget {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
     padding: 24px;
     background-color: #f5e8e5;
     border-radius: 12px;
+
+    @media screen and (width >= 430px) {
+      gap: 30px;
+    }
   }
 
   &__title {
@@ -138,8 +168,12 @@
   &__categories {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
     list-style: none;
+
+    @media screen and (width >= 430px) {
+      gap: 30px;
+    }
   }
 
   &__categories li {
