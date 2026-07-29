@@ -36,13 +36,49 @@
 
     @media screen and (min-width: u.$bp-tablet) {
       flex-direction: row;
-      gap: 100px;
+      gap: 60px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    padding: 7px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    transition: box-shadow 0.3s;
+
+    @media screen and (min-width: u.$bp-tablet) {
+      font-size: 1.3rem;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 10px rgba(u.$color-secondary-dark, 0.4);
+    }
+
+    // &:active {
+    //   color: u.$color-secondary-dark;
+
+    //   // transform: scale(0.98); // Кнопка слегка вдавливается при клике
+    // }
+
+    &::placeholder {
+      color: rgba(u.$color-secondary-dark, 0.7);
     }
   }
 
   &__btn {
     padding: 7px 20px;
     font-size: 1rem;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: u.$color-primary-light;
     transition: box-shadow 0.3s;
 
     @media screen and (min-width: u.$bp-tablet) {
@@ -55,17 +91,6 @@
 
     &:active {
       transform: scale(0.98); // Кнопка слегка вдавливается при клике
-    }
-
-    &--mail {
-      color: u.$color-secondary-dark;
-    }
-
-    &--subscribe {
-      color: u.$color-primary-light;
-      background-color: transparent;
-      border: 1px solid;
-      border-color: u.$color-primary-light;
     }
   }
 }

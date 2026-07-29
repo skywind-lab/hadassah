@@ -105,6 +105,21 @@
     }
   }
 
+  &__btn {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 7px 20px;
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: u.$color-brand;
+
+    @media screen and (min-width: u.$bp-tablet) {
+      padding: 7px 20px;
+      font-size: 1.3rem;
+    }
+  }
+
   &__right {
     display: flex;
     flex-direction: column;

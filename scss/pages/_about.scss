@@ -65,6 +65,25 @@
   }
 
   &__btn {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 7px 20px;
+    font-size: 1rem;
     color: u.$color-green;
+    background-color: u.$color-primary-light;
+    border: none;
+    transition: box-shadow 0.3s;
+
+    @media screen and (min-width: u.$bp-tablet) {
+      font-size: 1.3rem;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 6px rgba(u.$color-secondary-dark, 0.4);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
   }
 }

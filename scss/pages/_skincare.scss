@@ -104,12 +104,32 @@
   flex-direction: column;
 }
 
-.сonsultation-section {
+.consultation-section {
   margin-top: 60px;
   text-align: center;
   background-color: rgba(u.$color-brand, 0.7);
 
   &__btn {
-    color: u.$color-secondary-dark;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 7px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: u.$color-primary-light;
+    transition: box-shadow 0.3s;
+
+    @media screen and (min-width: u.$bp-tablet) {
+      font-size: 1.3rem;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 6px rgba(u.$color-secondary-dark, 0.4);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
   }
 }

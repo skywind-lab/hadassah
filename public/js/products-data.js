@@ -50,7 +50,7 @@ const products = [
   {
     id: 5,
     category: "makeup",
-    categoryLabel: "Bestseller",
+    categoryLabel: "Eyes",
     title: "Nude Eyeshadow Palette",
     description: "12 shades to create any look",
     price: 42,
@@ -62,7 +62,7 @@ const products = [
   {
     id: 6,
     category: "makeup",
-    categoryLabel: "Matte Finish",
+    categoryLabel: "Lips",
     title: "Velvet Kiss Matte Lipstick",
     description: "Up to 12 hours wear, non-drying",
     price: 26,
@@ -74,7 +74,7 @@ const products = [
   {
     id: 7,
     category: "makeup",
-    categoryLabel: "Wow Effect",
+    categoryLabel: "Lashes",
     title: "Infinite Length Mascara",
     description: "Length and volume without clumps",
     price: 58,
@@ -86,7 +86,7 @@ const products = [
   {
     id: 8,
     category: "makeup",
-    categoryLabel: "Premium",
+    categoryLabel: "Face",
     title: "Flawless Skin Foundation",
     description: "Natural coverage, SPF 30",
     price: 41,
@@ -98,7 +98,7 @@ const products = [
   {
     id: 9,
     category: "fragrances",
-    categoryLabel: "Rose Peony Musk",
+    categoryLabel: "Romantic/Tender",
     title: "Rose Garden",
     description: "Delicate scent, notes of damascus rose",
     price: 85,
@@ -110,7 +110,7 @@ const products = [
   {
     id: 10,
     category: "fragrances",
-    categoryLabel: "Sea Salt Bergamot Amber",
+    categoryLabel: "Daily/Fresh",
     title: "Ocean Breeze",
     description: "Fresh marine fragrance for the confident",
     price: 101,
@@ -122,7 +122,7 @@ const products = [
   {
     id: 11,
     category: "fragrances",
-    categoryLabel: "Jasmine Vanilla Oud",
+    categoryLabel: "Evening/Night Out",
     title: "Midnight Bloom",
     description: "Mysterious evening with oriental notes",
     price: 101,
@@ -134,7 +134,7 @@ const products = [
   {
     id: 12,
     category: "fragrances",
-    categoryLabel: "Grapefruit Mandarin Cedar",
+    categoryLabel: "Daily/Fresh",
     title: "Citrus Dream",
     description: "Energizing citrus bouquet for daily use",
     price: 75,
