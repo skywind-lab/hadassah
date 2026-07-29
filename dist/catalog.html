@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <!-- Styles -->
-    <link rel="stylesheet" crossorigin href="/hadassah/assets/main-DtX3QRJf.css">
+    <link rel="stylesheet" crossorigin href="/hadassah/assets/main-BvtxF34e.css">
   </head>
   <body>
     <!-- Heder -->
@@ -150,7 +150,45 @@
 
       <!-- Catalog Section -->
       <section class="section catalog-section">
-        <div class="catalog-section__layout">
+        <!-- Selection -->
+        <div class="container catalog-section__selection">
+          <div class="custom-select" id="sortSelect">
+            <button type="button" class="custom-select__button">
+              <span class="custom-select__value">Popular</span>
+              <svg
+                class="custom-select__arrow"
+                width="12"
+                height="8"
+                viewBox="0 0 12 8"
+                aria-hidden="true"
+              >
+                <path
+                  d="M1 1.5L6 6.5L11 1.5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+
+            <ul class="custom-select__dropdown">
+              <li class="custom-select__option is-active" data-value="popular">
+                Popular
+              </li>
+              <li class="custom-select__option" data-value="price-asc">
+                Price: Low to High
+              </li>
+              <li class="custom-select__option" data-value="price-desc">
+                Price: High to Low
+              </li>
+              <li class="custom-select__option" data-value="newest">Newest</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Layout -->
+        <div class="container catalog-section__layout">
           <!-- Сайдбар с фильтрами (В WP это станет sidebar.php / WooCommerce Widgets) -->
           <aside class="sidebar">
             <div class="sidebar__filter-widget">
@@ -177,102 +215,39 @@
               </ul>
 
               <h5 class="sidebar__title sidebar__price">Price Range</h5>
-              <div class="price-filter">
+              <div class="price-range">
                 <input
+                  class="price-range__slider"
                   type="range"
-                  class="price-filter__slider"
+                  id="range"
                   min="0"
                   max="150"
-                  value="150"
+                  value="120"
+                  step="1"
                 />
-                <div class="price-filter__values">
-                  <span>€0</span>
-                  <span>€150</span>
-                </div>
+              </div>
+              <div class="price-range__labels">
+                <span>€0</span>
+                <span id="current-price">€150</span>
               </div>
             </div>
           </aside>
 
           <!-- Products -->
-          <div class="catalog-section__main"></div>
+          <div class="catalog-section__main">
+            <!-- Сетка товаров (Стандартная структура Woo: ul.products > li.product) -->
 
-          <!-- Toolbar -->
-          <div class="toolbar">
-            <div class="toolbar__select" id="sortSelect">
-              <button class="toolbar__btn" type="button">
-                <span class="toolbar__selected">Popular</span>
-                <svg
-                  class="toolbar__arrow"
-                  width="10"
-                  height="6"
-                  viewBox="0 0 10 6"
-                  fill="none"
-                >
-                  <path
-                    d="M1 1L5 5L9 1"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </button>
-              <ul class="toolbar__dropdown">
-                <li class="toolbar__option active" data-value="popular">
-                  Popular
-                </li>
-                <li class="toolbar__option" data-value="price-low">
-                  Price: Low to High
-                </li>
-                <li class="toolbar__option" data-value="price-high">
-                  Price: High to Low
-                </li>
-                <li class="toolbar__option" data-value="newest">Newest</li>
+            <!-- новый -->
+            <ul class="catalog-section__product-grid">
+              <!-- Карточки подставятся сюда через JS -->
+            </ul>
+
+            <nav class="pagination" aria-label="Pagination">
+              <ul class="pagination__list">
+                <!-- Кнопки подставятся сюда через JS -->
               </ul>
-            </div>
+            </nav>
           </div>
-
-          <!-- Сетка товаров (Стандартная структура Woo: ul.products > li.product) -->
-          <ul class="catalog-section__product-grid">
-            <li
-              class="product-card catalog-section__card"
-              data-price="48"
-              data-category="skincare"
-            >
-              <div class="product-card__image-wrap">
-                <picture>
-                  <source
-                    srcset="/hadassah/assets/Skincare_acid-DcHF1XEy.webp"
-                    type="image/webp"
-                  />
-                  <img
-                    src="/hadassah/assets/Skincare_acid-7zpLBoF1.jpg"
-                    alt="Skincare set"
-                    class="product-card__image"
-                  />
-                </picture>
-                <a href="#" class="product-card__overlay-link">View Details</a>
-              </div>
-
-              <div class="product-card__content">
-                <p class="mini-text product-card__category">Hydration</p>
-                <p class="card-title product-card__title">
-                  Hyaluronic Acid Serum
-                </p>
-                <p class="product-card__description">
-                  Intensive hydration for 72 hours
-                </p>
-                <div class="product-card__footer">
-                  <p class="product-card__price">€52</p>
-                  <button
-                    class="card-text-green product-card__btn"
-                    type="button"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            </li>
-          </ul>
         </div>
       </section>
     </main>
@@ -374,6 +349,12 @@
 
 
     <script src="js/mobile-menu.js"></script>
-    <script src="js/toolbar.js"></script>
+    <script src="js/custom-select.js"></script>
+    <!-- <script src="js/sidebar.js"></script> -->
+
+    <script src="js/products-data.js"></script>
+    <script src="js/catalog.js"></script>
+
+    <script src="js/pagination.js"></script>
   </body>
 </html>
