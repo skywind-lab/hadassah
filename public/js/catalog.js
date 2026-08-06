@@ -83,6 +83,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // 3.5 Обновление счётчиков в сайдбаре
+  function updateSidebarCounts() {
+    const counts = {
+      all: products.length,
+      skincare: products.filter((item) => item.category === "skincare").length,
+      makeup: products.filter((item) => item.category === "makeup").length,
+      fragrances: products.filter((item) => item.category === "fragrances")
+        .length,
+      new: products.filter((item) => item.isNew === true).length,
+    };
+
+    document.querySelectorAll(".sidebar__categories a").forEach((link) => {
+      const url = new URL(link.href);
+      const category = url.searchParams.get("category") || "all";
+      const countSpan = link.querySelector(".sidebar__count");
+
+      if (countSpan && counts[category] !== undefined) {
+        countSpan.textContent = `(${counts[category]})`;
+      }
+    });
+  }
+
   // 4. Главная функция фильтрации
   function applyFilter(maxPrice) {
     // Фильтруем исходный массив
@@ -109,7 +131,22 @@ document.addEventListener("DOMContentLoaded", () => {
     updatePriceDisplay(priceInput.value);
   }
 
+  // Считываем категорию из URL при загрузке страницы
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoryFromUrl = urlParams.get("category");
+
+  if (categoryFromUrl === "new") {
+    filteredProducts = products.filter((item) => item.isNew === true);
+  } else if (categoryFromUrl && categoryFromUrl !== "all") {
+    filteredProducts = products.filter(
+      (item) => item.category === categoryFromUrl,
+    );
+  } else {
+    filteredProducts = [...products];
+  }
+
   // Первоначальный рендер
   renderPagination();
   renderPage(1);
+  updateSidebarCounts();
 });

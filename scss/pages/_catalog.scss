@@ -178,7 +178,6 @@
 
   &__categories li {
     display: flex;
-    justify-content: space-between;
 
     @include u.mini-text;
 
@@ -186,6 +185,9 @@
   }
 
   &__categories a {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     text-decoration: none;
     transition:
       color,

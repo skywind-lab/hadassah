@@ -21,6 +21,7 @@ const products = [
     imageWebp: "./images/Skincare_aloe.webp",
     imageJpg: "./images/Skincare_aloe.jpg",
     alt: "Skincare gel",
+    isNew: true,
   },
 
   {
