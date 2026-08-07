@@ -52,6 +52,23 @@
       grid-template-columns: repeat(3, 1fr);
       padding: 0;
     }
+
+    &--four-cols {
+      padding: 10% 15%;
+
+      @media (width <= 1260px) and (min-width: u.$bp-desktop) {
+        gap: 10px;
+      }
+
+      @media screen and (min-width: u.$bp-tablet) {
+        padding: 5% 10%;
+      }
+
+      @media screen and (min-width: u.$bp-desktop) {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 120px 0;
+      }
+    }
   }
 }
 
