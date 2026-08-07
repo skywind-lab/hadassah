@@ -51,6 +51,7 @@ const products = [
   {
     id: 5,
     category: "makeup",
+    subcategory: "eyes",
     categoryLabel: "Eyes",
     title: "Nude Eyeshadow Palette",
     description: "12 shades to create any look",
@@ -63,6 +64,7 @@ const products = [
   {
     id: 6,
     category: "makeup",
+    subcategory: "lips",
     categoryLabel: "Lips",
     title: "Velvet Kiss Matte Lipstick",
     description: "Up to 12 hours wear, non-drying",
@@ -75,6 +77,7 @@ const products = [
   {
     id: 7,
     category: "makeup",
+    subcategory: "eyes",
     categoryLabel: "Lashes",
     title: "Infinite Length Mascara",
     description: "Length and volume without clumps",
@@ -87,6 +90,7 @@ const products = [
   {
     id: 8,
     category: "makeup",
+    subcategory: "face",
     categoryLabel: "Face",
     title: "Flawless Skin Foundation",
     description: "Natural coverage, SPF 30",
@@ -99,6 +103,7 @@ const products = [
   {
     id: 9,
     category: "fragrances",
+    subcategory: "floral",
     categoryLabel: "Romantic/Tender",
     title: "Rose Garden",
     description: "Delicate scent, notes of damascus rose",
@@ -111,6 +116,7 @@ const products = [
   {
     id: 10,
     category: "fragrances",
+    subcategory: "fresh",
     categoryLabel: "Daily/Fresh",
     title: "Ocean Breeze",
     description: "Fresh marine fragrance for the confident",
@@ -123,6 +129,7 @@ const products = [
   {
     id: 11,
     category: "fragrances",
+    subcategory: "amber",
     categoryLabel: "Evening/Night Out",
     title: "Midnight Bloom",
     description: "Mysterious evening with oriental notes",
@@ -135,6 +142,7 @@ const products = [
   {
     id: 12,
     category: "fragrances",
+    subcategory: "fresh",
     categoryLabel: "Daily/Fresh",
     title: "Citrus Dream",
     description: "Energizing citrus bouquet for daily use",

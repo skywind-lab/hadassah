@@ -29,3 +29,5 @@ document.addEventListener("DOMContentLoaded", () => {
     customSelect.classList.remove("is-open");
   });
 });
+
+// Этот скрипт делает выпадающую выбиралку в каталоге над блоком с продуктами

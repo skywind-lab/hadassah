@@ -134,6 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Считываем категорию из URL при загрузке страницы
   const urlParams = new URLSearchParams(window.location.search);
   const categoryFromUrl = urlParams.get("category");
+  const subcategoryFromUrl = urlParams.get("subcategory");
 
   if (categoryFromUrl === "new") {
     filteredProducts = products.filter((item) => item.isNew === true);
@@ -145,8 +146,16 @@ document.addEventListener("DOMContentLoaded", () => {
     filteredProducts = [...products];
   }
 
+  if (subcategoryFromUrl) {
+    filteredProducts = filteredProducts.filter(
+      (item) => item.subcategory === subcategoryFromUrl,
+    );
+  }
+
   // Первоначальный рендер
   renderPagination();
   renderPage(1);
   updateSidebarCounts();
 });
+
+// Этот скрипт управляет каталогом и сортирует карточки по цене, а также считает товары по категориям в сайдбаре, здесь же есть информация по товарам через view more
